@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit:contain">
+
+  <title>r-cert-1</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="../css/informdefend.css" rel="stylesheet">
+</head>
+<body>
+
+  
+  <!-- МОДАЛЬНОЕ ОКНО -->
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__box">
+      <div class="modal__body modal__body--big-padding">
+        <form class="form">
+
+          <h2 class="subtitle subtitle--modal"><span class="red">«SUBJECT»</span></h2>
+
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title">СОСТАВ ПОЛЕЙ ЗАПРОСА НА ИЗДАНИЕ СЕРТИФИКАТА</h2>
+            </div>
+            <section class="section__subsection">
+              <div class="section__block section__block--header section__block--lightgrey">
+                <h3 class="section-title section-title--subtitle">Владелец сертификата  /  Subject</h3>
+              </div>
+              <div class="section__block section__block--body section__block--light">
+                <table class="form-table form-table--bordered-gap form-table--small-body-gap form-table--cert-ext-subject">
+              
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+              
+                  <thead class="form-table__thead">
+                    <tr class="form-table__tr">
+                      <th class="form-table__th">OID</th>
+                      <th class="form-table__th">Наименование</th>
+                      <th class="form-table__th">Значение</th>
+                    </tr>
+                  </thead>
+                  <tbody class="form-table__tbody">
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="OID">
+                        <div class="text-required">OID</div>
+                      </td>
+                      <td class="form-table__td" data-th="Наименование">DisplayName</td>
+                      <td class="form-table__td" data-th="Значение">
+                        <input type="text" class="input-text" placeholder="Введите значение">
+                      </td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="OID">OID</td>
+                      <td class="form-table__td" data-th="Наименование">DisplayName</td>
+                      <td class="form-table__td" data-th="Значение">
+                        <input type="text" class="input-text input-text--disabled" disabled value="DefaultValue" placeholder="Введите значение">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </section>
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title">Заголовок раздела</h2>
+            </div>
+            <section class="section__block section__block--body section__block--no-padding">
+              <table class="info-table info-table--section info-table--cert-ext-subject">
+
+                <col class="info-table__col">
+                
+                <thead class="info-table__thead">
+                  <tr class="info-table__tr">
+                    <th class="info-table__th">Владелец сертификата</th>
+                  </tr>
+                </thead>
+                <tbody class="info-table__tbody">
+                  <tr class="info-table__tr">
+                    <td class="info-table__td" data-th="OID">
+                      <ul>
+                        <li>DisplayName/OID = <Значение></li>
+                        <li>DisplayName/OID = <Значение></li>
+                        <li>S = 69 Тверская область</li>
+                        <li>L = Нижний Волочек</li>
+                        <li>SNILS = 12345678909</li>
+                        <li>INN = 123456789098</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </section>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../js/informdefend.js"></script>
+<script>
+informdefend();
+</script>
+</body>
+</html>

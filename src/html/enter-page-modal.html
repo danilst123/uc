@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit:contain">
+
+  <title></title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="../css/informdefend.css" rel="stylesheet">
+</head>
+<body>
+  
+  <!-- МОДАЛЬНОЕ ОКНО -->
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__box modal__box--small">
+      <div class="modal__head">
+        <div class="modal__title"></div>
+        <div class="modal__close" title="Закрыть"></div>
+      </div>
+      <div class="modal__body">
+        <div class="enter-page enter-page--modal">
+          <div class="enter-page__container container">
+
+            <div class="enter-page__box">
+              <h1 class="enter-page__title">
+                <img src="../img/auth-attention.svg" alt="">
+                Произошла ошибка
+              </h1>
+            </div>
+            <div class="enter-page__box">
+              <p>
+                Сообщить об ошибке в Службу технической поддержки: <br>
+                <a href="mailto:help@adres.ru">help@adres.ru</a>
+              </p>
+              <section class="section section--auth">
+                <section class="section__block section__block--header section__block--toggler section__block--grey">
+                  <h2 class="section-title section-title--dropdown section-title--expanded">информация об ошибке: код ошибки 403</h2>
+                </section>
+                <section class="section__block section__block--body">
+                  <table class="info-table info-table--auth-error">
+
+                    <col class="info-table__col">
+                    <col class="info-table__col">
+
+                    <tbody class="info-table__tbody">
+                      <tr class="info-table__tr">
+                        <td class="info-table__td">
+                          <div class="cell-title cell-title--no-colon">
+                            <span>Код ошибки:</span>
+                          </div>
+                        </td>
+                        <td class="info-table__td">403</td>
+                      </tr>
+                      <tr class="info-table__tr">
+                        <td class="info-table__td">
+                          <div class="cell-title">
+                            <span>Текст ошибки:</span>
+                          </div>
+                        </td>
+                        <td class="info-table__td">Доступ запрещен</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </section>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../js/informdefend.js"></script>
+<script>
+informdefend();
+</script>
+</body>
+</html>

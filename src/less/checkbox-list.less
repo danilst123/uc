@@ -1,0 +1,49 @@
+.checkbox-list {
+	max-width: 100%; //ie fix
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: -5px -15px;
+
+	&__item {
+		flex-shrink: 0;
+		margin: 5px 15px !important;
+	}
+
+  &--adm,
+  &--reestr-templates {
+    margin-top: 12px;
+
+    @media screen and @xs-max {
+      margin-bottom: 10px;
+    }
+  }
+
+  &--aside {
+    display: block;
+    padding: 8px 0;
+    margin: 0;
+
+    .checkbox-list__item {
+      margin: 0 !important;
+    }
+  }
+
+  &--column {
+    display: block;
+    margin: -5px 0;
+
+    .checkbox-list__item {
+      margin: 5px 0 !important;
+    }
+  }
+
+  &--scollable {
+    max-height: 436px;
+    overflow: auto;
+
+    @media screen and @sm-max {
+      max-height: 226px;
+    }
+  }
+}

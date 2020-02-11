@@ -1,0 +1,31 @@
+.round-toggler {
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid #e6e6e6;
+	border-radius: 50%;
+	background-color: #fff;
+	cursor: pointer;
+	position: relative;
+	perspective: 9999999px;
+
+	&--big {
+		width: 36px;
+		height: 36px;
+	}
+
+	&--active {
+		svg {
+			transform: rotateX(180deg);
+		}
+	}
+
+	svg {
+		transition: all 0.3s;
+		width: 12px;
+		height: auto;
+	}
+
+}

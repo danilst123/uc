@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit:contain">
+
+  <title>r-cert-5</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="../css/informdefend.css" rel="stylesheet">
+</head>
+<body>
+  
+  <!-- МОДАЛЬНОЕ ОКНО -->
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__box">
+      <div class="modal__body modal__body--big-padding">
+        <form class="form">
+
+          <h2 class="subtitle subtitle--modal"><span class="red">«CertificateRequestExtension»</span> / TypeInfo =  KeyValuePairs / <span class="grey">UnrestrictedList</span> </h2>
+          
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title">Заголовок раздела</h2>
+            </div>
+            <section class="section__subsection">
+              <div class="section__block section__block--header section__block--lightgrey">
+                <h3 class="section-title section-title--subtitle"><div class="text-required">DisplayName / OID</div></h2>
+              </div>
+              <div class="section__block section__block--body section__block--light">
+                <table class="form-table form-table--small-body-gap form-table--cert-ext-keyvaluepairs-insert">
+                
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+                
+                  <thead class="form-table__thead">
+                    <tr class="form-table__tr">
+                      <th class="form-table__th">OID</th>
+                      <th class="form-table__th" colspan="2">Значение</th>
+                    </tr>
+                  </thead>
+                  <tbody class="form-table__tbody">
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="OID">
+                        <div class="input-text-block">
+                          <input type="text" class="input-text-block__input input-text" value="1.2.643.100.113.1" placeholder="Введите OID">
+                          <button class="input-text-block__reset"></button>
+                        </div>
+                      </td>
+                      <td class="form-table__td" data-th="Значение">
+                        <div class="input-text-block">
+                          <input type="text" class="input-text-block__input input-text" value="Класс средства ЭП КС1" placeholder="Введите значение">
+                          <button class="input-text-block__reset"></button>
+                        </div>
+                      </td>
+                      <td class="form-table__td">
+                        <button class="delete-btn"></button>
+                      </td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="OID">
+                        <div class="input-text-block">
+                          <input type="text" class="input-text-block__input input-text" placeholder="Введите OID">
+                          <button class="input-text-block__reset"></button>
+                        </div>
+                      </td>
+                      <td class="form-table__td" data-th="Значение">
+                        <div class="input-text-block">
+                          <input type="text" class="input-text-block__input input-text" placeholder="Введите значение">
+                          <button class="input-text-block__reset"></button>
+                        </div>
+                      </td>
+                      <td class="form-table__td">
+                        <button class="delete-btn"></button>
+                      </td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" colspan="3">
+                        <button class="add-row text-btn text-btn--blue">
+                          <img src="../img/plus.svg" class="text-btn__img">
+                          <span class="text-btn__text">Добавить значение</span>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </section>
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title">Заголовок раздела</h2>
+            </div>
+            <section class="section__subsection">
+              <div class="section__block section__block--header section__block--lightgrey">
+                <h3 class="section-title section-title--subtitle"><div class="text-required">DisplayName / OID</div></h2>
+              </div>
+              <div class="section__block section__block--body section__block--light">
+                <table class="form-table form-table--bordered-gap form-table--small-body-gap form-table--cert-ext-keyvaluepairs-show">
+                
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+                
+                  <thead class="form-table__thead">
+                    <tr class="form-table__tr">
+                      <th class="form-table__th">OID</th>
+                      <th class="form-table__th">Значение</th>
+                    </tr>
+                  </thead>
+                  <tbody class="form-table__tbody">
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="OID">1.2.643.100.113.1</td>
+                      <td class="form-table__td" data-th="Значение">13456789765</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </section>
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title">Заголовок раздела</h2>
+            </div>
+            <section class="section__block section__block--body section__block--no-padding">
+              <table class="info-table info-table--section info-table--cert-ext-keyvaluepairs">
+
+                <col class="info-table__col">
+                
+                <thead class="info-table__thead">
+                  <tr class="info-table__tr">
+                    <th class="info-table__th">OID (DISPLAYNAME)</th>
+                  </tr>
+                </thead>
+                <tbody class="info-table__tbody">
+                  <tr class="info-table__tr">
+                    <td class="info-table__td" data-th="OID (DISPLAYNAME)">
+                      <ul>
+                       <li>OID = Значение</li>
+                       <li>OID = Значение</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </section>
+
+          <h2 class="subtitle subtitle--modal"><span class="red">«CertificateRequestExtension»</span> / TypeInfo =  KeyValuePairs / <span class="grey">RestrictedList</span> </h2>
+          
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title">Заголовок раздела</h2>
+            </div>
+            <section class="section__subsection">
+              <div class="section__block section__block--header section__block--lightgrey">
+                <h3 class="section-title section-title--subtitle"><div class="text-required">DisplayName / OID</div></h2>
+              </div>
+              <div class="section__block section__block--body section__block--light">
+                <table class="form-table form-table--small-body-gap form-table--cert-ext-keyvaluepairs-insert-named">
+                
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+                
+                  <thead class="form-table__thead">
+                    <tr class="form-table__tr">
+                      <th class="form-table__th">OID</th>
+                      <th class="form-table__th">Наименование</th>
+                      <th class="form-table__th" colspan="2">Значение</th>
+                    </tr>
+                  </thead>
+                  <tbody class="form-table__tbody">
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="OID">
+                        <div class="input-text-block">
+                          <input type="text" class="input-text-block__input input-text" value="1.2.643.100.113.1" placeholder="Введите OID">
+                          <button class="input-text-block__reset"></button>
+                        </div>
+                      </td>
+                      <td class="form-table__td" data-th="Наименование">СНИЛС</td>
+                      <td class="form-table__td" data-th="Значение">
+                        <div class="input-text-block">
+                          <input type="text" class="input-text-block__input input-text" placeholder="Введите значение">
+                          <button class="input-text-block__reset"></button>
+                        </div>
+                      </td>
+                      <td class="form-table__td">
+                        <button class="delete-btn"></button>
+                      </td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="OID">
+                        <div class="input-text-block">
+                          <input type="text" class="input-text-block__input input-text" placeholder="Введите OID">
+                          <button class="input-text-block__reset"></button>
+                        </div>
+                      </td>
+                      <td class="form-table__td" data-th="Наименование"></td>
+                      <td class="form-table__td" data-th="Значение">
+                        <div class="input-text-block">
+                          <input type="text" class="input-text-block__input input-text" placeholder="Введите значение">
+                          <button class="input-text-block__reset"></button>
+                        </div>
+                      </td>
+                      <td class="form-table__td">
+                        <button class="delete-btn"></button>
+                      </td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" colspan="4">
+                        <button class="add-row text-btn text-btn--blue">
+                          <img src="../img/plus.svg" class="text-btn__img">
+                          <span class="text-btn__text">Добавить значение</span>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </section>
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title">Заголовок раздела</h2>
+            </div>
+            <section class="section__subsection">
+              <div class="section__block section__block--header section__block--lightgrey">
+                <h3 class="section-title section-title--subtitle"><div class="text-required">DisplayName / OID</div></h2>
+              </div>
+              <div class="section__block section__block--body section__block--light">
+                <table class="form-table form-table--bordered-gap form-table--small-body-gap form-table--cert-ext-keyvaluepairs-show-named">
+                
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+                
+                  <thead class="form-table__thead">
+                    <tr class="form-table__tr">
+                      <th class="form-table__th">OID</th>
+                      <th class="form-table__th">Наименование</th>
+                      <th class="form-table__th">Значение</th>
+                    </tr>
+                  </thead>
+                  <tbody class="form-table__tbody">
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="OID">1.2.643.100.113.1</td>
+                      <td class="form-table__td" data-th="Наименование">СНИЛС</td>
+                      <td class="form-table__td" data-th="Значение">13456789765</td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="OID">1.2.643.100.113.1</td>
+                      <td class="form-table__td" data-th="Наименование">ИНН</td>
+                      <td class="form-table__td" data-th="Значение">13456789765</td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="OID">1.2.643.100.113.1</td>
+                      <td class="form-table__td" data-th="Наименование">ОГРН</td>
+                      <td class="form-table__td" data-th="Значение">13456789765</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </section>
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title">Заголовок раздела</h2>
+            </div>
+            <section class="section__block section__block--body section__block--no-padding">
+              <table class="info-table info-table--section info-table--cert-ext">
+
+                <col class="info-table__col">
+                
+                <thead class="info-table__thead">
+                  <tr class="info-table__tr">
+                    <th class="info-table__th">OID (DISPLAYNAME)</th>
+                  </tr>
+                </thead>
+                <tbody class="info-table__tbody">
+                  <tr class="info-table__tr">
+                    <td class="info-table__td" data-th="OID (DISPLAYNAME)">
+                      <ul>
+                       <li>DisplayName/OID = Значение</li>
+                       <li>DisplayName/OID = Значение</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </section>
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title">Заголовок раздела</h2>
+            </div>
+            <section class="section__subsection">
+              <div class="section__block section__block--header section__block--lightgrey">
+                <h3 class="section-title section-title--subtitle"><div class="text-required">DisplayName / OID</div></h2>
+              </div>
+              <div class="section__block section__block--body section__block--light">
+                <table class="form-table form-table--small-body-gap form-table--cert-ext-keyvaluepairs-insert-named">
+                
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+                
+                  <thead class="form-table__thead">
+                    <tr class="form-table__tr">
+                      <th class="form-table__th">OID</th>
+                      <th class="form-table__th">Наименование</th>
+                      <th class="form-table__th" colspan="2">Значение</th>
+                    </tr>
+                  </thead>
+                  <tbody class="form-table__tbody">
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="OID">
+                        <div class="select field-required">
+                          <select data-placeholder="Выберите OID">
+                            <option></option>
+                            <option selected>1.2.643.3.131.1.1</option>
+                            <option data-required="true" data-displayname="ОГРН">1.2.643.100.1</option>
+                            <option>2.5.4.12</option>
+                            <option>Key</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td class="form-table__td" data-th="Наименование">
+                        СНИЛС
+                      </td>
+                      <td class="form-table__td" data-th="Значение">
+                        <div class="input-text-block">
+                          <input type="text" class="input-text-block__input input-text" value="Класс средства ЭП КС1" placeholder="Введите значение">
+                          <button class="input-text-block__reset"></button>
+                        </div>
+                      </td>
+                      <td class="form-table__td">
+                        <button class="delete-btn"></button>
+                      </td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="OID">
+                        <div class="select">
+                          <select data-placeholder="Выберите OID">
+                            <option></option>
+                            <option>
+                              1.2.643.3.131.1.1 <span>(ИНН)</span>
+                            </option>
+                            <option>
+                              1.2.643.100.1* <span>(ОГРН)</span>
+                            </option>
+                            <option>
+                              2.5.4.12  <span>(Должность)</span>
+                            </option>
+                            <option>
+                              Key <span>(DisplayName)</span>
+                            </option>
+                          </select>
+                        </div>
+                      </td>
+                      <td class="form-table__td" data-th="Наименование"></td>
+                      <td class="form-table__td" data-th="Значение">
+                        <div class="input-text-block">
+                          <input type="text" class="input-text-block__input input-text" placeholder="Введите значение">
+                          <button class="input-text-block__reset"></button>
+                        </div>
+                      </td>
+                      <td class="form-table__td">
+                        <button class="delete-btn"></button>
+                      </td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" colspan="4">
+                        <button class="add-row text-btn text-btn--blue">
+                          <img src="../img/plus.svg" class="text-btn__img">
+                          <span class="text-btn__text">Добавить значение</span>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </section>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../js/informdefend.js"></script>
+<script>
+informdefend();
+</script>
+</body>
+</html>

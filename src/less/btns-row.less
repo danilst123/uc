@@ -1,0 +1,41 @@
+.btns-row {
+  max-width: calc(100% + 20px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  margin: -5px;
+  margin-bottom: 35px;
+
+  @media screen and @sm-max {
+    justify-content: center;
+  }
+
+  @media screen and @xs-max {
+    max-width: calc(100% + 10px);
+    flex-direction: column;
+  }
+
+  &--bordered {
+    position: relative;
+    padding-bottom: 30px;
+
+    &:after {
+      content: '';
+      height: 1px;
+      width: calc(100% - 10px);
+      background-color: #e6e6e6;
+      position: absolute;
+      bottom: 0;
+      left: 5px;
+    }
+  }
+
+  &__item {
+    width: 230px;
+  }
+
+  & > * {
+    margin: 5px;
+  }
+}

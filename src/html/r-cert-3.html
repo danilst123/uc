@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit:contain">
+
+  <title>r-cert</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="../css/informdefend.css" rel="stylesheet">
+</head>
+<body>
+  
+  <!-- МОДАЛЬНОЕ ОКНО -->
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__box">
+      <div class="modal__body modal__body--big-padding">
+        <form class="form">
+          
+          <h2 class="subtitle subtitle--modal"><span class="red">«CertificateRequestExtension»</span> / TypeInfo = Oids / <span class="grey">UnrestrictedList</span></h2>
+
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title">Заголовок раздела</h2>
+            </div>
+            <section class="section__subsection">
+              <div class="section__block section__block--header section__block--lightgrey">
+                <h3 class="section-title section-title--subtitle"><div class="text-required">DisplayName / OID</div></h2>
+              </div>
+              <div class="section__block section__block--body section__block--light">
+                <table class="form-table form-table--small-body-gap form-table--cert-ext-octetstrings-insert">
+                
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+                
+                  <thead class="form-table__thead">
+                    <tr class="form-table__tr">
+                      <th class="form-table__th" colspan="2">Значение</th>
+                    </tr>
+                  </thead>
+                  <tbody class="form-table__tbody">
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="Значение">
+                        <div class="input-text-block">
+                          <input type="text" class="input-text-block__input input-text" value="nonRepudiation /contentCommitment" placeholder="Введите значение">
+                          <button class="input-text-block__reset"></button>
+                        </div>
+                      </td>
+                      <td class="form-table__td">
+                        <button class="delete-btn"></button>
+                      </td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="OID">
+                        <div class="input-text-block">
+                          <input type="text" class="input-text-block__input input-text" placeholder="Введите значение">
+                          <button class="input-text-block__reset"></button>
+                        </div>
+                      </td>
+                      <td class="form-table__td">
+                        <button class="delete-btn"></button>
+                      </td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" colspan="2">
+                        <button class="add-row text-btn text-btn--blue">
+                          <img src="../img/plus.svg" class="text-btn__img">
+                          <span class="text-btn__text">Добавить значение</span>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </section>
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title">Заголовок раздела</h2>
+            </div>
+            <section class="section__subsection">
+              <div class="section__block section__block--header section__block--lightgrey">
+                <h3 class="section-title section-title--subtitle">DisplayName / OID</h2>
+              </div>
+              <div class="section__block section__block--body section__block--light">
+                <table class="form-table form-table--bordered-gap form-table--small-body-gap">
+                
+                  <col class="form-table__col">
+                
+                  <thead class="form-table__thead">
+                    <tr class="form-table__tr">
+                      <th class="form-table__th">Значение</th>
+                    </tr>
+                  </thead>
+                  <tbody class="form-table__tbody">
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="Значение">nonRepudiation /contentCommitment</td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="Значение">keyEncipherment</td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="Значение">dataEncipherment</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </section>
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title">Заголовок раздела</h2>
+            </div>
+            <section class="section__block section__block--body section__block--no-padding">
+              <table class="info-table info-table--section info-table--cert-ext-octetstrings">
+
+                <col class="info-table__col">
+                
+                <thead class="info-table__thead">
+                  <tr class="info-table__tr">
+                    <th class="info-table__th">OID (DISPLAYNAME)</th>
+                  </tr>
+                </thead>
+                <tbody class="info-table__tbody">
+                  <tr class="info-table__tr">
+                    <td class="info-table__td" data-th="OID">
+                     <ul>
+                       <li>Value</li> 
+                       <li>Value</li>
+                       <li>Value</li>
+                       <li>Value</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </section>
+
+          <h2 class="subtitle subtitle--modal"><span class="red">«CertificateRequestExtension»</span> / TypeInfo = Oids / <span class="grey">RestrictedList</span></h2>
+
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title">Заголовок раздела</h2>
+            </div>
+            <section class="section__subsection">
+              <div class="section__block section__block--header section__block--lightgrey">
+                <h3 class="section-title section-title--subtitle"><div class="text-required">DisplayName / OID</div></h2>
+              </div>
+              <div class="section__block section__block--body section__block--light">
+                <table class="form-table form-table--small-body-gap form-table--cert-ext-octetstrings-insert">
+                
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+                
+                  <thead class="form-table__thead">
+                    <tr class="form-table__tr">
+                      <th class="form-table__th" colspan="2">значение</th>
+                    </tr>
+                  </thead>
+                  <tbody class="form-table__tbody">
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="Значение">
+                        <div class="select">
+                          <select data-placeholder="Выберите значение из списка">
+                            <option></option>
+                            <option selected>1.2.643.100.113.1 (КЛАСС СРЕДСТВА ЭП КС1)</option>
+                            <option>1</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td class="form-table__td">
+                        <button class="delete-btn"></button>
+                      </td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="Значение">
+                        <div class="select">
+                          <select data-placeholder="Выберите значение из списка">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td class="form-table__td">
+                        <button class="delete-btn"></button>
+                      </td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" colspan="2">
+                        <button class="add-row text-btn text-btn--blue">
+                          <img src="../img/plus.svg" class="text-btn__img">
+                          <span class="text-btn__text">Добавить значение</span>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </section>
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title">Заголовок раздела</h2>
+            </div>
+            <section class="section__subsection">
+              <div class="section__block section__block--header section__block--lightgrey">
+                <h3 class="section-title section-title--subtitle"><div class="text-required">DisplayName / OID</div></h2>
+              </div>
+              <div class="section__block section__block--body section__block--light">
+                <table class="form-table form-table--bordered-gap form-table--small-body-gap form-table--cert-ext-octetstrings-show">
+                
+                  <col class="form-table__col">
+                
+                  <thead class="form-table__thead">
+                    <tr class="form-table__tr">
+                      <th class="form-table__th">Значение</th>
+                      <th class="form-table__th">Наименование</th>
+                    </tr>
+                  </thead>
+                  <tbody class="form-table__tbody">
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="Значение">nonRepudiation /contentCommitment</td>
+                      <td class="form-table__td" data-th="Наименование">Неотрекаемость от авторства</td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="Значение">keyEncipherment</td>
+                      <td class="form-table__td" data-th="Наименование">Шифрование ключей</td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="Значение">dataEncipherment</td>
+                      <td class="form-table__td" data-th="Наименование">Шифрование данных</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </section>
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title">Заголовок раздела</h2>
+            </div>
+            <section class="section__block section__block--body section__block--no-padding">
+              <table class="info-table info-table--section info-table--cert-ext-octetstrings">
+
+                <col class="info-table__col">
+                
+                <thead class="info-table__thead">
+                  <tr class="info-table__tr">
+                    <th class="info-table__th">OID (DISPLAYNAME)</th>
+                  </tr>
+                </thead>
+                <tbody class="info-table__tbody">
+                  <tr class="info-table__tr">
+                    <td class="info-table__td" data-th="OID">
+                      <ul>
+                       <li>Value (DisplayName)</li>
+                       <li>Value</li>
+                       <li>Value (DisplayName)</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </section>
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title">Заголовок раздела</h2>
+            </div>
+            <section class="section__subsection">
+              <div class="section__block section__block--header section__block--lightgrey">
+                <h3 class="section-title section-title--subtitle"><div class="text-required">DisplayName / OID</div></h2>
+              </div>
+              <div class="section__block section__block--body section__block--light">
+                <table class="form-table form-table--small-body-gap form-table--cert-ext-octetstrings-insert">
+                
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+                
+                  <thead class="form-table__thead">
+                    <tr class="form-table__tr">
+                      <th class="form-table__th" colspan="2">Значение</th>
+                    </tr>
+                  </thead>
+                  <tbody class="form-table__tbody">
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="Значение">
+                        <div class="select">
+                          <select data-placeholder="Выберите значение из списка">
+                            <option></option>
+                            <option selected>
+                              nonRepudiation /contentCommitment <span>(Неотрекаемость от авторства)</span>
+                            </option>
+                            <option>
+                              keyEncipherment <span>(Шифрование ключей)</span>
+                            </option>
+                            <option>
+                              dataEncipherment*  <span>(Шифрование данных)</span>
+                            </option>
+                            <option>
+                              Value <span>(DisplayName)</span>
+                            </option>
+                          </select>
+                        </div>
+                      </td>
+                      <td class="form-table__td">
+                        <button class="delete-btn"></button>
+                      </td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" data-th="Значение">
+                        <div class="select">
+                          <select data-placeholder="Выберите значение из списка">
+                            <option></option>
+                            <option>
+                              nonRepudiation /contentCommitment <span>(Неотрекаемость от авторства)</span>
+                            </option>
+                            <option>
+                              keyEncipherment <span>(Шифрование ключей)</span>
+                            </option>
+                            <option>
+                              dataEncipherment*  <span>(Шифрование данных)</span>
+                            </option>
+                            <option>
+                              Value <span>(DisplayName)</span>
+                            </option>
+                          </select>
+                        </div>
+                      </td>
+                      <td class="form-table__td">
+                        <button class="delete-btn"></button>
+                      </td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td" colspan="2">
+                        <button class="add-row text-btn text-btn--blue">
+                          <img src="../img/plus.svg" class="text-btn__img">
+                          <span class="text-btn__text">Добавить значение</span>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </section>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../js/informdefend.js"></script>
+<script>
+informdefend();
+</script>
+</body>
+</html>

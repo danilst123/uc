@@ -1,0 +1,50 @@
+.submenu {
+  width: 100%;
+  display: none;
+  position: relative;
+  z-index: 5;
+  
+  @media screen and @sm-min {
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);   
+  }
+  @media screen and @sm-max {
+    margin-top: -3px;
+  }
+
+  &:hover {
+    display: block;
+    opacity: 1;
+  }
+
+  &--adm-link {
+    left: initial;
+    right: 0;
+  }
+
+  &__item {
+    a {
+      display: block;
+      color: #333;
+      font-family: @main_font;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      text-transform: uppercase;
+      background: #fff;
+      transition: all 0.3s;
+      padding: 10px 20px;
+
+      @media screen and @sm-max {
+        text-align: center;
+      }
+
+      &:hover {
+        background: #5aa7fb;
+        color: #fff;
+      }
+    }
+  }
+}

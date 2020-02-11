@@ -1,0 +1,30 @@
+.input-text-block {
+  position: relative;
+
+  &__input {
+    padding-right: 30px;
+
+    &.input-text--colon {
+      padding-right: 55px;
+    }
+  }
+
+  &__reset {
+    display: none;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/delete.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px auto;
+    opacity: 0.3;
+    position: absolute;
+    right: 5px;
+    top: 8px;
+  }
+
+  &__input.input-text--colon + &__reset {
+    right: 35px;
+  }
+}

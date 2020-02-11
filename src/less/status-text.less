@@ -1,0 +1,58 @@
+.status-text {
+  display: inline-block;
+  text-align: center;
+  height: 20px;
+  border-radius: 10px;
+  padding: 0 12px;
+  color: #ffffff;
+  font-family: @main_font;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 21px;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &--request {
+    margin-left: 16px;
+    margin-right: -7px;
+
+    @media screen and @xs-max {
+      margin-top: 10px;
+      margin-left: 0;
+    }
+  }
+
+  &--adm {
+    margin-left: 16px;
+
+    @media screen and @xs-max {
+      margin-top: 15px;
+      margin-left: 0;
+    }
+  }
+
+  &--green {
+    background-color: #85c762;
+  }
+
+  &--orange {
+    background-color: #fa854b;
+  }
+
+  &--red {
+    background-color: #ff4641;
+  }
+
+  &--yellow {
+    background-color: #ffaf02;
+  }
+
+  &--grey {
+    background-color: #b9b9b9;
+  }
+
+  &:hover + .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+}

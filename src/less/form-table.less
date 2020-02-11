@@ -1,0 +1,441 @@
+.form-table {
+	width: 100%;
+	margin: -4.5px 0; // обнуление padding-а первой и последней строки
+	table-layout: fixed;
+
+	@media screen and @sm-max {
+		display: block;
+		margin-top: 0;
+		margin: 0 !important;
+	}
+	
+	& + & {
+		border-top: 1px solid #e6e6e6;
+		margin-top: 15px !important;
+
+		@media screen and @sm-max {
+			padding-top: 15px;
+			margin-top: 25px !important;
+
+			.form-table__tbody[data-caption]:before {
+				margin-top: 0px;
+			}
+		}
+	}
+
+	&__col {
+		@media screen and @sm-max {
+			display: none;
+		}
+	}
+
+	&__thead {	
+		@media screen and @sm-max {
+			display: none;
+		}
+	}
+
+	&__tbody {
+		@media screen and @sm-max {
+			display: block;
+		}
+
+		&[data-caption]:before {
+			@media screen and @sm-max {
+				content: attr(data-caption);
+				display: block;
+				color: #50535b;
+				font-family: @main_font;
+				font-size: 13px;
+				font-weight: 700;
+				line-height: 1.4;
+				text-transform: uppercase;
+				text-align: left;
+				border-bottom: 1px solid #e6e6e6;
+				padding-bottom: 10px;
+				margin: 10px 0;
+			}
+		}
+	}
+
+	&__tr {		
+		@media screen and @sm-max {
+			display: block;
+
+			&:not(:last-of-type) {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	&__th {
+		color: #abafba;
+		font-family: @main_font;
+		font-size: 11px;
+		font-weight: 500;
+		line-height: 1.4;
+		text-transform: uppercase;
+		text-align: left;
+		padding: 4.5px 10px 4.5px 0;
+
+		@media screen and @sm-max {
+			display: none;
+		}
+
+		&--hac {
+		  text-align: center;
+
+		  @media screen and @sm-max {
+		    text-align: left;
+		  }
+		}
+
+		&--vat {
+		  vertical-align: top;
+		}
+
+		&:last-of-type {
+			padding-right: 0 !important;
+
+			@media screen and @sm-max {
+				padding: 0 !important;
+			}
+		}
+
+		small {
+			font-size: inherit;
+			text-transform: none;
+		}
+	}
+
+	&__td {
+		height: 44px;
+		color: #50535b;
+		font-family: @main_font;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 16px;
+		vertical-align: middle;
+		padding: 4.5px 10px 4.5px 0;
+
+		@media screen and @sm-max {
+			display: block;
+			height: auto;
+			width: 100% !important;
+			line-height: 1.2;
+			padding: 0 !important;
+			margin-bottom: 15px;
+
+			.cell-title:not(.cell-title--bottom-offset) {
+				margin-bottom: -10px;
+			}
+		}
+
+		&--hac {
+		  text-align: center;
+
+		  @media screen and @sm-max {
+		    text-align: left;
+		  }
+		}
+
+		&--vat {
+		  vertical-align: top;
+		}
+
+		&:last-of-type {
+			padding-right: 0 !important;
+
+			@media screen and @sm-max {
+				padding: 0 !important;
+			}
+		}
+
+		&[data-th]:before {
+			@media screen and @sm-max {
+				content: attr(data-th)':';
+				display: block;
+				color: #abafba;
+				font-family: @main_font;
+				font-size: 11px;
+				font-weight: 500;
+				line-height: 1.2;
+				text-transform: uppercase;
+				text-align: left;
+				margin-bottom: 5px;
+			}
+		}
+
+		&--top-aligned {
+			vertical-align: top;
+		}
+
+		&--top-offset {
+			.cell-title {
+				margin-top: 11px;
+
+				@media screen and @sm-max {
+					margin-top: 0;
+				}
+			}
+
+		}
+	}
+
+	&__tbody &__tr:last-child &__td:last-child {
+		@media screen and @sm-max {
+			margin-bottom: 0;
+		}
+	}
+
+	&--bordered-gap {
+		margin: -14px 0;
+	
+		.form-table__thead {
+			border-bottom: 1px solid #e6e6e6;
+		}
+		
+		.form-table__td, 
+		.form-table__th {
+			padding: 7px 10px 7px 0;
+		}
+
+		.form-table__tr {
+			&:not(:first-of-type) {
+				border-top: 1px solid #e6e6e6;
+
+				@media screen and @sm-max {
+					padding-top: 15px;
+				}
+			}
+			&:first-of-type {
+				.form-table__th {
+					padding-top: 14px;
+				}
+			}
+			&:last-of-type {
+				.form-table__td, 
+				.form-table__th {
+					padding-bottom: 14px;
+				}
+			}
+		}
+	}
+
+	&--small-body-gap {
+		margin: -5px 0;
+
+		.form-table__thead {
+			border-bottom: 1px solid #e6e6e6;
+		}	
+		.form-table__td, 
+		.form-table__th {
+			padding: 2.5px 10px 2.5px 0;
+		}
+
+		.form-table__tr {
+			&:first-of-type {
+				.form-table__td, 
+				.form-table__th {
+					padding-top: 5px;
+				}
+			}
+			&:last-of-type {
+				.form-table__td, 
+				.form-table__th {
+					padding-bottom: 5px;
+				}
+			}
+		}
+	}
+
+	&--bordered-gap&--small-body-gap {
+		margin: -6px 0;
+
+		.form-table__th {
+			padding: 6px 10px 12px 0;
+
+			@media screen and @sm-max {
+				padding: 0 !important;
+			}
+		}
+
+		.form-table__td {
+			padding: 6px 10px 6px 0;
+
+			@media screen and @sm-max {
+				padding: 0 !important;
+			}
+		}
+	}
+	
+	// Сведения о запросе
+	&--reestr-ir &__col {
+		&:nth-child(1) { width: 200px; }
+		&:nth-child(2) { width: 300px; }
+		&:nth-child(3) { width: 194px; }
+	}
+	
+	// Сведения о владельце сертификата
+	// Значения, входящие в расширенные SAN запроса
+	&--reestr-ioc &__col,
+	&--reestr-san &__col {
+		&:nth-child(1) { width: 200px; }
+		&:nth-child(2) { width: 158px; }
+		&:nth-child(4) { width: 172px; }
+		&:nth-child(5) { width: 36px; }
+	}
+	
+	// Реквизиты изготовленного сертификата
+	&--reestr-rcc &__col {
+		&:nth-child(1) { width: 200px; }
+		&:nth-child(2) { width: 35px; }
+		&:nth-child(4) { width: 300px; }
+	}
+	
+
+
+	// Модалка "Регистрация запроса на издание сертификата"
+	// Сведения о шаблоне
+	&--rrpc-ccrpc-it &__col,
+	&--rrpc-irpc-it &__col {
+		&:nth-child(1) { width: 166px; }
+		&:nth-child(3) { width: 125px; }
+		&:nth-child(4) { width: 274px; }
+	}
+	// Период действия квалифицированного сертификата
+	&--rrpc-ccrpc-paqc &__col,
+	&--rrpc-irpc-paqc &__col {
+		&:nth-child(1) { width: 166px; }
+		&:nth-child(3) { width: 175px; }
+		&:nth-child(4) { width: 274px; }
+	}
+	// Информаия о привилегированном пользователе
+	// Файл запроса
+	// Политики сертификата  /  2.5.29.32
+	&--rrpc-ccrpc-ipu &__col,
+	&--rrpc-irpc-ipu &__col,
+	&--rrpc-irpc-fr &__col,
+	&--rrpc-irpc-pc &__col {
+		&:nth-child(1) { width: 166px; }
+	}
+	// Владелец сертификата  /  Subject
+	&--rrpc-ccrpc-oc &__col,
+	&--rrpc-irpc-oc &__col {
+		&:nth-child(1) { width: 166px; }
+		&:nth-child(2) { width: 222px; }
+	}
+	// Политики сертификата  /  2.5.29.32
+	// Расширенное использования ключа  /  2.5.29.3
+	// Область использования ключа проверки ЭП  /  2.5.29.15
+	&--rrpc-ccrpc-pc,
+	&--rrpc-ccrpc-euk,
+	&--rrpc-ccrpc-fukcep,
+	&--rrpc-irpc-fukcep {
+		.form-table__col {
+			&:nth-child(2) { width: 36px; }
+		}
+	}	
+
+
+	// Причина отклонения
+	&--pdc &__col {
+		&:nth-child(1) { width: 166px; }
+	}
+
+
+	// Управление привилегированными пользователями
+	&--adm-search &__col {
+		&:nth-child(1) { width: 132px; }
+		&:nth-child(5) { width: 150px; }
+		&:nth-child(6) { width: 230px; }
+	}
+
+	// Издание сертификата привилегированного пользователя
+	&--adm-cert &__col {
+		&:nth-child(1) { width: 224px; }
+		&:nth-child(3) { width: 532px; }
+	}
+
+	// Поиск 
+	&--search &__col {
+		&:nth-child(1) { width: 356px; }
+		&:nth-child(3) { width: 120px; }
+		&:nth-child(5) { width: 36px; }
+	}
+
+	// Модалка "Тип сведений и способ группировки"	
+	// Выберите тип сведений в отчете
+	&--timg-snglgml &__col {
+		&:nth-child(1) { width: 152px; }
+	}
+
+	// Модалка "Профиль выгрузки в файловую систему"
+	&--pufs &__col {
+		&:nth-child(1) { width: 152px; }
+	}
+
+	// Модалка "Добавить зону видимости"
+	&--azv &__col {
+		&:nth-child(1) { width: 126px; }
+	}
+
+	// Выгрузка списка аннулированных сертификатов (САС)
+	&--ulrc &__col {
+		&:nth-child(1) { width: 256px; }
+		&:nth-child(2) { width: 470px; }
+	}
+
+	// Модалка "Импортировать шаблон"
+	// Модалка "Редактировать сведения о шаблоне"
+	// Модалка "Редактировать зоны видимости шаблона"
+	&--it &__col,
+	&--pt &__col,
+	&--rt &__col,
+	&--ezvt &__col,
+	&--eit &__col {
+		&:nth-child(1) { width: 148px; }
+	}
+
+	// Модалка "Удалить шаблон"
+	&--dt &__col {
+		&:nth-child(1) { width: 148px; }
+		&:nth-child(3) { width: 72px; }
+	}
+	// "Расширения запроса"
+	// «SUBJECT»
+	&--cert-ext-subject &__col {
+	  &:nth-child(1) { width: 165px; }
+	  &:nth-child(2) { width: 220px; }
+	}
+	// «OIDS»
+	&--cert-ext-oids-insert &__col {
+		&:nth-child(2) { width: 36px; }
+	}
+	&--cert-ext-oids-show &__col {
+		&:nth-child(1) { width: 165px; }
+	}
+	// «OctetStrings»
+	&--cert-ext-octetstrings-insert &__col {
+		&:nth-child(2) { width: 36px; }
+	}
+	&--cert-ext-octetstrings-show &__col {
+		&:nth-child(1) { width: 288px; }
+	}
+	// «KeyValuePairs»
+	&--cert-ext-keyvaluepairs-insert &__col {
+		&:nth-child(3) { width: 36px; }
+	}
+	&--cert-ext-keyvaluepairs-insert-named &__col {
+		&:nth-child(1) { width: 230px; }
+		&:nth-child(2) { width: 150px; }
+		&:nth-child(4) { width: 36px; }
+	}
+	&--cert-ext-keyvaluepairs-show &__col {
+		&:nth-child(1) { width: 431px; }
+	}
+	&--cert-ext-keyvaluepairs-show-named &__col {
+		&:nth-child(1) { width: 230px; }
+		&:nth-child(2) { width: 150px; }
+	}
+}

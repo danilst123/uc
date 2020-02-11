@@ -1,0 +1,48 @@
+.tooltip {
+  max-width: 100%;
+  visibility: hidden;
+  border-radius: 3px;
+  position: absolute;
+  z-index: 5;
+  top: calc(100% + 10px);
+  left: 0;
+  color: #333;
+  font-family: @main_font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.7px;
+  background-color: #fff;
+  padding: 10px 15px;
+  box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  &--reestr {
+    max-width: none;
+    top: calc(100% + 5px);
+    color: #5a5c63;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    white-space: nowrap;
+    letter-spacing: normal;
+
+    @media screen and @md-max {
+      max-width: 80vw;
+    }
+
+    @media screen and @md-max and @md-min {
+      left: inherit;
+      right: 0;
+    }
+
+    span {
+      color: #abafba !important;
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+      text-transform: none;
+    }
+  }
+}

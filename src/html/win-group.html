@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit:contain">
+
+  <title>Тип сведений и способ группировки</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="../css/informdefend.css" rel="stylesheet">
+</head>
+<body>
+  
+  <!-- МОДАЛЬНОЕ ОКНО -->
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__box modal__box--small">
+      <div class="modal__head">
+        <div class="modal__title">Тип сведений и способ группировки</div>
+        <div class="modal__close" title="Закрыть"></div>
+      </div>
+      <div class="modal__body">
+        <form class="form">
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title"><div class="text-required">Выберите тип сведений в отчете</div></h2>
+            </div>
+            <div class="section__block section__block--body section__block--light">
+              <table class="form-table form-table--small-body-gap form-table--timg-stir">
+
+                <col class="form-table__col">
+
+                <tbody class="form-table__tbody">
+                  <tr class="form-table__tr">
+                    <td class="form-table__td">
+                      <div class="radiobuttons-list radiobuttons-list--column">
+                        <label class="radiobuttons-list__item radiobutton">
+                          <input type="radio" name="foo" class="radiobutton__input" checked>
+                          <span class="radiobutton__radio"></span>
+                          <span class="radiobutton__text">агрегированная информация</span>
+                        </label>
+                        <label class="radiobuttons-list__item radiobutton">
+                          <input type="radio" name="foo" class="radiobutton__input">
+                          <span class="radiobutton__radio"></span>
+                          <span class="radiobutton__text">детализированная информация</span>
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title"><div class="text-required">Выберите количество уровней группировки и способ группировки для уровня</div></h2>
+            </div>
+            <div class="section__block section__block--body section__block--light">
+              <table class="form-table form-table--timg-snglgml">
+
+                <col class="form-table__col">
+
+                <tbody class="form-table__tbody">
+                  <tr class="form-table__tr">
+                    <td class="form-table__td">
+                      <label class="checkbox">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__title">1 уровень</span>
+                      </label>
+                    </td>
+                    <td class="form-table__td">
+                      <div class="select">
+                        <select data-placeholder="Выберите способ группировки">
+                          <option></option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="form-table__tr">
+                    <td class="form-table__td">
+                      <label class="checkbox">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__title">2 уровень</span>
+                      </label>
+                    </td>
+                    <td class="form-table__td">
+                      <div class="select select--disabled">
+                        <select data-placeholder="Выберите способ группировки" disabled>
+                          <option></option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="form-table__tr">
+                    <td class="form-table__td">
+                      <label class="checkbox">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__title">3 уровень</span>
+                      </label>
+                    </td>
+                    <td class="form-table__td">
+                      <div class="select select--disabled">
+                        <select data-placeholder="Выберите способ группировки" disabled>
+                          <option></option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="form-table__tr">
+                    <td class="form-table__td">
+                      <label class="checkbox">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__title">4 уровень</span>
+                      </label>
+                    </td>
+                    <td class="form-table__td">
+                      <div class="select select--disabled">
+                        <select data-placeholder="Выберите способ группировки" disabled>
+                          <option></option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="form__control">
+            <button type="reset" class="reset-form text-btn text-btn--big">
+              <img src="../img/delete.svg" alt="" class="text-btn__img">
+              <span class="text-btn__text">Отмена</span>
+            </button>
+            <input type="submit" value="Продолжить" class="btn">
+          </section>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../js/informdefend.js"></script>
+<script>
+informdefend();
+</script>
+</body>
+</html>

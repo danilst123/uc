@@ -1,0 +1,56 @@
+.input-file {
+	display: flex;
+	align-items: center;
+	margin: 0 -20px 0 0;
+
+	@media screen and @sm-max {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: 0 0 -10px;
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		margin: 0 20px 0 0;
+
+		@media screen and @sm-max {
+	    margin: 0 0 10px;
+		}
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+	}
+
+	&__input {
+		display: none !important;
+	}
+
+	&__files {
+		display: none;
+	}
+
+	&__error {
+		display: none;
+		font-size: 14px;
+		background-size: auto;
+		background-position: left top;
+		padding-left: 25px;
+	}
+
+	&__remove {
+		display: none;
+		height: 18px;
+		width: 18px;
+		flex-shrink: 0;
+		background-image: url(../img/delete.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		opacity: 0.4;
+		cursor: pointer;
+		margin-left: 5px;
+	}
+}

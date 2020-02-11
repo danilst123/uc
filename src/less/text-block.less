@@ -1,0 +1,22 @@
+.text-block {
+  display: block;
+  color: #50535b;
+  font-family: @main_font;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  &--elsign {
+    visibility: hidden;
+    max-height: 235px;
+    padding-right: 30px;
+
+    @media screen and @sm-max {
+      padding-right: 15px;
+    }
+
+    .scroll-wrapper.scrollbar-inner & {
+      visibility: visible;
+    }
+  }
+}

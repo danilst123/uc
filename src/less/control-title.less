@@ -1,0 +1,42 @@
+.control-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 35px;
+
+  @media screen and @sm-max {
+    display: block;
+  }
+
+  &--toped {
+    align-items: flex-start;
+  }
+
+  &__block {
+    max-width: 50%;
+    position: relative;
+
+    @media screen and @sm-max {
+      max-width: 100%;
+    }
+  }
+
+  .main-title {
+    margin: 0;
+  }
+
+  .btns-row {
+    margin-bottom: -10px;
+
+    @media screen and @sm-min {
+      margin-left: 0;
+    }
+    @media screen and @sm-max {
+      margin-top: 20px;
+    }
+  }
+
+  .status-text {
+    margin-top: 6px;
+  }
+}

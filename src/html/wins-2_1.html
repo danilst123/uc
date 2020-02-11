@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit:contain">
+
+  <title>Электронная подпись</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.min.css" rel="stylesheet">
+  <link href="../css/informdefend.css" rel="stylesheet">
+</head>
+<body>
+  
+  <!-- МОДАЛЬНОЕ ОКНО -->
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__box modal__box--small">
+      <div class="modal__head">
+        <div class="modal__title">
+          <img src="../img/el-sign.svg" alt="">
+          <span>Электронная подпись</span>
+        </div>
+        <div class="modal__close" title="Закрыть"></div>
+      </div>
+      <div class="modal__body">
+        <form class="form">
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title">Значение подписи</h2>
+            </div>
+            <div class="section__block section__block--body section__block--light">
+              <div class="scrollbar-inner">
+                <div class="text-block text-block--elsign break-text">
+                  MIIMJgYJKoZIhvcNAQcCoIIMFzCCDBMCAQExDDAKBgYqhQMCAgkFADALBgkqhkiG9w0BBwGggggcMIIIGDCCB8egAwIBAgIUb+uYQMHnS8i1QM/
+                  9u88oEFx6+xYwCAYGKoUDAgIDMIIBOTEgMB4GCSqGSIb3DQEJARYRdWNfZmtAcm9za2F6bmEucnUxGTAXBgNVBAgMENCzLiDQnNC+0YHQutCy0LAxGjAYBggqhQMDgQMB
+                  ARIMMDA3NzEwNTY4NzYwMRgwFgYFKoUDZAESDTEwNDc3OTcwMTk4MzAxLDAqBgNVBAkMI9GD0LvQuNGG0LAg0JjQu9GM0LjQvdC60LAsINC00L7QvCA3MRUwEwYDV
+                  QQHDAzQnNC+0YHQutCy0LAxCzAJBgNVBAYTAlJVMTgwNgYDVQQKDC/
+                  QpNC10LTQtdGA0LDQu9GM0L3QvtC1INC60LDQt9C90LDRh9C10LnRgdGC0LLQvjE4MDYGA1UEAwwv0KTQtdC00LXRgNCw0LvRjNC90L7QtSDQutCw0LfQvdCw0YfQtdC50Y
+                  HRgtCy0L4wHhcNMTgwNTExMDUxNTM0WhcNMTkwODExMDUxNTM0WjCCAWMxGjAYBggqhQMDgQMBARIMMjgwMTAzNjkyMjg2MRYwFAYFKoUDZAMSCzA1NjMyOT
+                  A1NTYwMR8wHQYJKoZIhvcNAQkBFhByYWlzYXNoOEBtYWlsLnJ1MQswCQYDVQQGEwJSVTEoMCYGA1UECAwf0JDQvNGD0YDRgdC60LDRjyDQvtCx0LvQsNGB0YLRjDEhMB8
+                  GA1UEBwwY0JHQu9Cw0LPQvtCy0LXRidC10L3RgdC6MTIwMAYDVQQKDCnQk9CQ0J7QoyDQqNC60L7Qu9CwLdC40L3RgtC10YDQvdCw0YIg4oSWODEqMCgGA1UEKgwh0K
+                  DQsNC40YHQsCDQk9C10L3QvdCw0LTRjNC10LLQvdCwMRcwFQYDVQQEDA7QpdC80LXQu9GR0LLQsDE5MDcGA1UEAwww0KXQvNC10LvRkdCy0LAg0KDQsNC40YHQsCDQ
+                  k9C10L3QvdCw0LTRjNC10LLQvdCwMGMwHAYGKoUDAgITMBIGByqFAwICJAAGByqFAwICHgEDQwAEQOE/EgBCr4C2c5bSfEPljed0WXT/FSRXzi3y0i65AwEKrLer2yr4/
+                  QwryEfZnlbSiuBBWrfl7sOEIlaBD1LdBGGjggR1MIIEcTAMBgNVHRMBAf8EAjAAMB0GA1UdIAQWMBQwCAYGKoUDZHEBMAgGBiqFA2RxAjA/
+                  BgNVHREEODA2oBIGA1UEDKALEwk1MDcxNTM2MTmgHQYKKoUDAz2e1zYBCKAPEw0wMzIzMjAwMDAwMDc1hgEwMDYGBSqFA2RvBC0MKyLQmtGA0LjQv9GC0L7Qn9G
+                  A0L4gQ1NQIiAo0LLQtdGA0YHQuNGPIDQuMCkwggExBgUqhQNkcASCASYwggEiDEQi0JrRgNC40L/RgtC+0J/RgNC+IENTUCIgKNCy0LXRgNGB0LjRjyAzLjYpICjQuNGB0L/
+                  QvtC70L3QtdC90LjQtSAyKQxoItCf0YDQvtCz0YDQsNC80LzQvdC+LdCw0L/Qv9Cw0YDQsNGC0L3Ri9C5INC60L7QvNC/
+                  0LvQtdC60YEgItCu0L3QuNGB0LXRgNGCLdCT0J7QodCiIi4g0JLQtdGA0YHQuNGPIDIuMSIMH+KEliAxNDkvNy82LTU2OSDQvtGCIDIxLjEyLjIwMTcMT9Ch0LXRgNGC0LjRhNC40L
+                  rQsNGCINGB0L7QvtGC0LLQtdGC0YHRgtCy0LjRjyDihJYg0KHQpC8xMjgtMjg3OCDQvtGCIDIwLjA2LjIwMTYwDgYDVR0PAQH/
+                  BAQDAgPoME8GA1UdJQRIMEYGCCsGAQUFBwMBBggrBgEFBQcDAgYNKoUDAz2e1zYBBgMFAQYNKoUDAz2e1zYBBgMFAgYIKoUDA4F7CAEGCCqFAwOBewgCMCsGA1UdE
+                  AQkMCKADzIwMTgwNTExMDUwNjQ5WoEPMjAxOTA4MTEwNTA2NDlaMIIBhQYDVR0jBIIBfDCCAXiAFBZVkaZRWMSJLGtRW9KFGQoBREgioYIBUqSCAU4wggFKMR4wHAYJK
+                  oZIhvcNAQkBFg9F1IX1c33qwRrUvYs7F5bmbekbGsxdyvJPiLMH23EHnbuLQuNL
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="form__control">
+            <button type="reset" class="close-modal text-btn text-btn--big">
+              <img src="../img/delete.svg" alt="" class="text-btn__img">
+              <span class="text-btn__text">Закрыть</span>
+            </button>
+            <input type="submit" value="Скопировать значение ЭП" class="btn">
+          </section>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.min.js"></script>
+<script src="../js/informdefend.js"></script>
+<script>
+informdefend();
+</script>
+<script>
+  // Custom scrollbar
+  $('.scrollbar-inner').scrollbar();
+</script>
+</body>
+</html>

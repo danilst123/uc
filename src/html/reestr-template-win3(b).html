@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit:contain">
+
+  <title>reestr-template-win3</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="../css/informdefend.css" rel="stylesheet">
+</head>
+<body>
+  
+  <!-- МОДАЛЬНОЕ ОКНО -->
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__box modal__box--small">
+      <div class="modal__head">
+        <div class="modal__title">Отозвать шаблон</div>
+        <div class="modal__close" title="Закрыть"></div>
+      </div>
+      <div class="modal__body">
+        <form class="form">
+          <div class="attention-block attention-block--important attention-block--modal">
+            <h4 class="attention-block__title">Обратите внимание!</h4>
+            <p class="attention-block__text">Данный шаблон будет отозван и станет недоступным для выбора 
+              при создании новых запросов на издание сертификатов</p>
+          </div>
+          <section class="section">
+            <div class="section__block section__block--body section__block--square-padding">
+              <table class="form-table form-table--pt">
+
+                <col class="form-table__col">
+                <col class="form-table__col">
+
+                <tbody class="form-table__tbody">
+                  <tr class="form-table__tr">
+                    <td class="form-table__td form-table__td--top-aligned form-table__td--top-offset">
+                      <div class="cell-title">Файл шаблона</div>
+                    </td>
+                    <td class="form-table__td form-table__td--top-aligned">
+                      <div class="field-block field-block--grey">
+                        <a href="" class="file-text">
+                          SertTemplate.xml
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="form-table__tr">
+                    <td class="form-table__td form-table__td--top-aligned form-table__td--top-offset">
+                      <div class="cell-title">Отображаемое имя</div>
+                    </td>
+                    <td class="form-table__td form-table__td--top-aligned">
+                      <input type="text" class="input-text" disabled value="Сертификат ЮЛ" placeholder="Введите отображаемое наименование шаблона">
+                    </td>
+                  </tr>
+                  <tr class="form-table__tr">
+                    <td class="form-table__td form-table__td--top-aligned form-table__td--top-offset">
+                      <div class="cell-title">Зоны видимости</div>
+                    </td>
+                    <td class="form-table__td form-table__td--top-aligned">
+                        <ul class="expand-list" data-is-certificate="false" data-is-top-list="true" data-is-visible="true" data-length="5">
+                          <li>Москва</li>
+                          <li>Тверь</li>
+                          <li>Орел</li>
+                          <li>Ставрополь</li>
+                          <li>Казань</li>
+            						  <li>Саратов</li>
+            						  <li>Оренбург</li>
+            						  <li>Воркута</li>
+            						  <li>Тюмень</li>
+            						  <li>Краснодар</li>
+                          <li>Тольятти</li>
+                          <li>Ижевск</li>
+                          <li>Ульяновск</li>
+                          <li>Барнаул</li>
+                          <li>Владивосток</li>
+                          <li>Ярославль</li>
+                          <li>Иркутск</li>
+                          <li>Тюмень</li>
+                          <li>Махачкала</li>
+                          <li>Хабаровск</li>
+                          <li>Оренбург</li>
+                          <li>Новокузнецк</li>
+                          <li>Кемерово</li>
+                          <li>Рязань</li>
+                          <li>Томск</li>
+                          <li>Астрахань</li>
+                          <li>Пенза</li>
+                          <li>Набережные Челны</li>
+                          <li>Липецк</li>
+                          <li>Тула</li>
+                          <li>Киров</li>
+                          <li>Чебоксары</li>
+                          <li>Калининград</li>
+                          <li>Брянск</li>
+                          <li>Курск</li>
+                          <li>Иваново</li>
+                          <li>Магнитогорск</li>
+                          <li>Улан-Удэ</li>
+                          <li>Тверь</li>
+                          <li>Ставрополь</li>
+                          <li>Нижний Тагил</li>
+                          <li>Белгород</li>
+                          <li>Архангельск</li>
+                          <li>Владимир</li>
+                          <li>Сочи</li>
+                          <li>Курган</li>
+                          <li>Смоленск</li>
+                          <li>Калуга</li>
+                          <li>Чита</li>
+                          <li>Орёл</li>
+                          <li>Волжский</li>
+                          <li>Череповец</li>
+                          <li>Владикавказ</li>
+                        </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="form__control">
+            <button type="reset" class="reset-form text-btn text-btn--big">
+              <img src="../img/delete.svg" alt="" class="text-btn__img">
+              <span class="text-btn__text">Отмена</span>
+            </button>
+            <input type="submit" value="Отозвать" class="btn btn--red">
+          </section>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../js/informdefend.js"></script>
+<script>
+informdefend();
+</script>
+</body>
+</html>

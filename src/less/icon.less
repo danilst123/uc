@@ -1,0 +1,83 @@
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+
+  &--pdf {
+    width: 27px;
+    height: 16px;
+    border-radius: 1px;
+    background-color: #478dda;
+    position: relative;
+
+    &:before {
+      content: 'PDF';
+      color: #ffffff;
+      font-family: @main_font;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+  }
+
+  &--ods {
+    width: 27px;
+    height: 16px;
+    border-radius: 1px;
+    background-color: #478dda;
+    position: relative;
+
+    &:before {
+      content: 'ODS';
+      color: #ffffff;
+      font-family: @main_font;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+  }
+
+  &--square {
+    width: 30px;
+    height: 30px;
+  }
+
+  &--agree {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    box-shadow: 0 2px 5px rgba(133, 199, 98, 0.7);
+    background-color: #85c762;
+    background-image: url('../img/agree.svg');
+    background-position: top -4px center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &--deny {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    box-shadow: 0 2px 5px rgba(246, 51, 46, 0.47);
+    background-color: #f6332e;
+    background-image: url('../img/deny.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &--label {
+    width: 21px;
+    height: 21px;
+    background-image: url('../img/label.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}

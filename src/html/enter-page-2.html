@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit:contain">
+
+  <title>enter-page-2</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="../css/informdefend.css" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- ШАПКА -->
+    <header class="header header--auth">
+      <section class="header__panel"> 
+        <div class="container header__container header__container--panel">
+          <a href="/" class="logo">
+            <img src="../img/logo.png" alt="Информазащита">
+          </a>
+          <h1 class="header__title">Юнисерт 4.0</h1>
+          <button class="btn btn--sign-in">
+            <img src="../img/sign-in.svg" alt="">
+            <span>Войти</span>
+          </button> 
+        </div>
+      </section>
+    </header>
+
+
+    <!-- КОНТЕНТ -->
+    <div class="enter-page">
+      <div class="enter-page__container container">
+
+        <div class="enter-page__box">
+          <h1 class="enter-page__title">
+            <img src="../img/auth-error.svg" alt="">
+            Ошибка
+          </h1>
+        </div>
+        <div class="enter-page__box">
+          <p>
+            <strong>Авторизация невозможна.</strong> <br> 
+            При проверке сертификата выявлено несоответствие: <br>
+            содержание несоответствия.
+          </p>
+        </div>
+        <div class="enter-page__box">
+          <p>
+            Для работы с системой необходимо выполнить <br> 
+            аутентификацию с использованием <br> 
+            сертификата электронной подписи
+          </p>
+          <button class="btn btn--auth">
+            <img src="../img/sign-in.svg" alt="">
+            <span>Войти</span>
+          </button> 
+          <p>либо перейти <br> к интерфейсу самообслуживания</p>
+          <button class="btn btn--auth">
+            <span>Самообслуживание</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer container">
+    <p class="copyright">©  2019 Компания «Информзащита»</p>
+  </footer>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../js/informdefend.js"></script>
+<script>
+informdefend();
+</script>
+</body>
+</html>

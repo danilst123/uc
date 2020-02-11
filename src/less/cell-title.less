@@ -1,0 +1,32 @@
+.cell-title {
+  display: flex;
+  vertical-align: middle;
+
+  @media screen and @sm-max {
+    display: inline-block;
+    
+    &:after {
+      content: ':';
+    }
+  }
+
+  &--right {
+    justify-content: flex-end;
+
+    @media screen and @sm-max {
+      justify-content: flex-start;
+    }
+  }
+
+  &--no-colon {
+    &:after {
+      @media screen and @sm-max {
+        display: none;
+      }
+    }
+  }
+
+  &--bottom-offset {
+    margin-bottom: 8px;
+  }
+}

@@ -1,0 +1,32 @@
+.error-text {
+  display: block;
+  min-height: 18px;
+  color: #e24954;
+  font-family: @main_font;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  position: relative;
+  padding-left: 18px;
+  text-transform: none;
+  background-image: url(../img/error.svg);
+  background-repeat: no-repeat;
+  background-position: left top 1.5px;
+  background-size: 14px 14px;
+
+  &:empty {
+    display: none;
+  }
+
+  &--lighter {
+    filter: brightness(150%);
+  }
+
+  &--offset {
+    margin: 5px 0;
+  }
+}
+
+.input-validation-error {
+  border-color: #d05b5b !important;
+}

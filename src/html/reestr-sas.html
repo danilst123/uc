@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit:contain">
+
+  <title>Выгрузка списка аннулированных сертификатов (САС)</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="../css/informdefend.css" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- ШАПКА -->
+    <header class="header">
+      <section class="header__panel"> 
+        <div class="container header__container header__container--panel">
+          <a href="/" class="logo">
+            <img src="../img/logo.png" alt="Информазащита">
+          </a>
+          <div class="hamburger hamburger--panel">
+            <div class="hamburger__item"></div>
+            <div class="hamburger__item"></div>
+            <div class="hamburger__item"></div>
+          </div>  
+        </div>
+      </section>
+      <section class="header__mobile-menu">
+        <div class="hamburger hamburger--mobile-menu">
+          <div class="hamburger__item"></div>
+          <div class="hamburger__item"></div>
+          <div class="hamburger__item"></div>
+        </div>  
+        <div class="container header__container header__container--mobile-menu">
+          <nav class="main-menu">
+            <a href="" class="main-menu__home"></a>
+            <ul class="main-menu__list">
+              <li class="main-menu__item"><a href="/">Реестр Запросов</a></li>
+              <li class="main-menu__item"><a href="/">Реестр Сертификатов </a></li>
+              <li class="main-menu__item main-menu__item--active"><a href="/">Выгрузка САС</a></li>
+              <li class="main-menu__item"><a href="/">Реестр шаблонов</a></li>
+            </ul> 
+          </nav>
+          <a href="/" class="administration-link">Администрирование</a>
+          <div class="user-block user-block--header">
+            <div class="user-block__name">Иванов Сергей Иванович</div>
+            <div class="user-block__title">Администратор</div>
+            <div class="round-toggler round-toggler--header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7"><g><g><path fill="#abafba" d="M0 1.82l5 5 5-5L8.828.648 5 4.476 1.172.648z"/></g></g></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- КОНТЕНТ -->
+    <main class="page">
+      <div class="container">
+
+        <!-- ЗАГОЛОВОК СТРАНИЦЫ -->
+        <h1 class="main-title">Выгрузка списка аннулированных сертификатов (САС)</h1>
+
+        <form class="form">
+          <section class="section">
+            <section class="section__block section__block--body section__block--light">
+              <table class="form-table form-table--small-body-gap form-table--ulrc">
+          
+                <col class="form-table__col">
+                <col class="form-table__col">
+                <col class="form-table__col">
+          
+                <tbody class="form-table__tbody">
+                  <tr class="form-table__tr">
+                    <td class="form-table__td">
+                      <div class="cell-title">Порядковый номер САС</div>
+                    </td>
+                    <td class="form-table__td">
+                      <input type="text" class="input-text input-text--disabled">
+                    </td>
+                    <td class="form-table__td"></td>
+                  </tr>
+                  <tr class="form-table__tr">
+                    <td class="form-table__td">
+                      <div class="cell-title">Дата издания САС</div>
+                    </td>
+                    <td class="form-table__td">
+                      <div class="date-from-to">
+                        <label class="datepicker-field datepicker-field--with-time datepicker-field--disabled date-from-to__item">
+                          <input class="datepicker-field__input" disabled>
+                        </label>
+                        <label class="datepicker-field datepicker-field--with-time date-from-to__item">
+                          <input class="datepicker-field__input">
+                        </label>
+                      </div>
+                    </td>
+                    <td class="form-table__td"></td>
+                  </tr>
+                  <tr class="form-table__tr">
+                    <td class="form-table__td">
+                      <div class="cell-title">Дата окончания срока действия САС</div>
+                    </td>
+                    <td class="form-table__td">
+                      <div class="date-from-to">
+                        <label class="datepicker-field datepicker-field--with-time date-from-to__item">
+                          <input class="datepicker-field__input">
+                        </label>
+                        <label class="datepicker-field datepicker-field--with-time date-from-to__item">
+                          <input class="datepicker-field__input">
+                        </label>
+                      </div>
+                    </td>
+                    <td class="form-table__td"></td>
+                  </tr>
+                  <tr class="form-table__tr">
+                    <td class="form-table__td">
+                      <div class="cell-title">Информация о ключе проверки ЭП издателя</div>
+                    </td>
+                    <td class="form-table__td" colspan="2">
+                      <input type="text" class="input-text">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </section>
+          <section class="section">
+            <section class="section__block section__block--header section__block--grey">
+              <h2 class="section-title">Реквизиты сертификата</h2>
+            </section>
+            <section class="section__block section__block--body section__block--light">
+              <table class="form-table form-table--small-body-gap form-table--ulrc">
+          
+                <col class="form-table__col">
+                <col class="form-table__col">
+                <col class="form-table__col">
+          
+                <tbody class="form-table__tbody">
+                  <tr class="form-table__tr">
+                    <td class="form-table__td">
+                      <div class="cell-title">Серийный номер сертификата</div>
+                    </td>
+                    <td class="form-table__td">
+                      <input type="text" class="input-text">
+                    </td>
+                    <td class="form-table__td"></td>
+                  </tr>
+                  <tr class="form-table__tr">
+                    <td class="form-table__td">
+                      <div class="cell-title">Дата аннулирования</div>
+                    </td>
+                    <td class="form-table__td">
+                      <div class="date-from-to">
+                        <label class="datepicker-field datepicker-field--with-time date-from-to__item">
+                          <input class="datepicker-field__input">
+                        </label>
+                        <label class="datepicker-field datepicker-field--with-time date-from-to__item">
+                          <input class="datepicker-field__input">
+                        </label>
+                      </div>
+                    </td>
+                    <td class="form-table__td"></td>
+                  </tr>
+                  <tr class="form-table__tr">
+                    <td class="form-table__td">
+                      <div class="cell-title">Дата компрометации или недействительности сертификата</div>
+                    </td>
+                    <td class="form-table__td">
+                      <div class="date-from-to">
+                        <label class="datepicker-field datepicker-field--with-time date-from-to__item">
+                          <input class="datepicker-field__input">
+                        </label>
+                        <label class="datepicker-field datepicker--with-time date-from-to__item">
+                          <input class="datepicker-field__input">
+                        </label>
+                      </div>
+                    </td>
+                    <td class="form-table__td"></td>
+                  </tr>
+                  <tr class="form-table__tr">
+                    <td class="form-table__td">
+                      <div class="cell-title">Причина отзыва сертификата</div>
+                    </td>
+                    <td class="form-table__td" colspan="2">
+                      <div class="select">
+                        <select data-placeholder="" data-search="Поиск">
+                          <option></option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </section>
+          <section class="form__control form__control--bigger-offset">
+            <button type="reset" class="reset-form text-btn text-btn--big">
+              <img src="../img/delete.svg" alt="" class="text-btn__img">
+              <span class="text-btn__text">Очистить</span>
+            </button>
+            <input type="submit" value="Выгрузить" class="btn">
+            <input type="submit" value="Выгрузить в файловую систему" class="btn">
+          </section>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer container">
+    <p class="copyright">©  2019 Компания «Информзащита»</p>
+  </footer>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../js/informdefend.js"></script>
+<script>
+informdefend();
+</script>
+</body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit:contain">
+
+  <title>Сведения о сертификате</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="../css/informdefend.css" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- ШАПКА -->
+    <header class="header">
+      <section class="header__panel"> 
+        <div class="container header__container header__container--panel">
+          <a href="/" class="logo">
+            <img src="../img/logo.png" alt="Информазащита">
+          </a>
+          <div class="hamburger hamburger--panel">
+            <div class="hamburger__item"></div>
+            <div class="hamburger__item"></div>
+            <div class="hamburger__item"></div>
+          </div>  
+        </div>
+      </section>
+      <section class="header__mobile-menu">
+        <div class="hamburger hamburger--mobile-menu">
+          <div class="hamburger__item"></div>
+          <div class="hamburger__item"></div>
+          <div class="hamburger__item"></div>
+        </div>  
+        <div class="container header__container header__container--mobile-menu">
+          <nav class="main-menu">
+            <a href="" class="main-menu__home"></a>
+            <ul class="main-menu__list">
+              <li class="main-menu__item"><a href="/">Реестр Запросов</a></li>
+              <li class="main-menu__item main-menu__item--active"><a href="/">Реестр Сертификатов </a></li>
+              <li class="main-menu__item"><a href="/">Реестр САС</a></li>
+              <li class="main-menu__item"><a href="/">Реестр шаблонов</a></li>
+            </ul> 
+          </nav>
+          <a href="/" class="administration-link">Администрирование</a>
+          <div class="user-block user-block--header">
+            <div class="user-block__name">Иванов Сергей Иванович</div>
+            <div class="user-block__title">Администратор</div>
+            <div class="round-toggler round-toggler--header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7"><g><g><path fill="#abafba" d="M0 1.82l5 5 5-5L8.828.648 5 4.476 1.172.648z"/></g></g></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- КОНТЕНТ -->
+    <main class="page">
+      <div class="container">
+
+        <div class="control-title">
+          <div class="control-title__block">
+            <!-- ЗАГОЛОВОК СТРАНИЦЫ -->
+            <h1 class="main-title">Сведения о сертификате</h1>
+            <div class="status-text status-text--green">Действует</div>
+          </div>
+          <div class="control-title__block">
+            <!-- кнопки -->
+            <div class="btns-row">
+              <button class="btn btn--red-bordered">
+                <img src="../img/stop.svg" alt="">
+                <span>Аннулировать</span>
+              </button>
+              <button class="btn btn--blue-bordered">
+                <img src="../img/download.svg" alt="">
+                <span>Скачать сертификат</span>
+              </button>
+          </div>
+          </div>
+        </div>
+        
+        <section class="section">
+          <section class="section__block section__block--header section__block--toggler section__block--grey">
+            <h2 class="section-title section-title--dropdown section-title--expanded">Общие сведения</h2>
+          </section>
+          <section class="section__block section__block--body section__block--no-padding">
+            <table class="info-table info-table--with-divider info-table--reestr-cert">
+
+              <col class="info-table__col">
+              <col class="info-table__col">
+              <col class="info-table__col">
+
+              <tbody class="info-table__tbody">
+                <tr class="info-table__tr">
+                  <td class="info-table__td">
+                    <div class="cell-title">
+                      <span>Серийный номер сертификата</span>
+                    </div>
+                  </td>
+                  <td class="info-table__td info-table__td--divider">
+                    <div class="break-text">123456712345671234567123456712345671234567</div>
+                  </td>
+                  <td class="info-table__td">
+                    <a class="link-inline" href="">
+                      <img src="../img/user.svg" alt="">
+                      <span>Сведения о работнике УЦ, выполнившем утверждение издания сертификата</span>
+                    </a>
+                    <a class="link-inline" href="">
+                      <img src="../img/user.svg" alt="">
+                      <span>Сведения о работнике УЦ, выполнившем аннулирование сертификата</span>
+                    </a>
+                  </td>
+                </tr>
+                <tr class="info-table__tr">
+                  <td class="info-table__td">
+                    <div class="cell-title">
+                      <span>Действие квалифицированного сертификата</span>
+                    </div>
+                  </td>
+                  <td class="info-table__td info-table__td--divider">
+                    <time datetime="21.12.2018" class="date-inline">21.12.2018</time>
+                    <div class="date-inline">—</div>
+                    <time datetime="22.12.2020" class="date-inline">22.12.2020</time>
+                  </td>
+                  <td class="info-table__td">
+                    <a class="link-inline" href="">
+                      <img src="../img/book.svg" alt="">
+                      <span>Сведения о шаблоне</span>
+                    </a>
+                  </td>
+                </tr>
+                <tr class="info-table__tr">
+                  <td class="info-table__td">
+                    <div class="cell-title">
+                      <span>Дата и время приостановления действия сертификата</span>
+                    </div>
+                  </td>
+                  <td class="info-table__td info-table__td--divider">10.02.2019  12:30:30</td>
+                  <td class="info-table__td">
+                    <a class="link-inline" href="">
+                      <img src="../img/doc.svg" alt="">
+                      <span>Сведения о запросе</span>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+        <section class="section">
+          <section class="section__block section__block--header section__block--toggler section__block--grey">
+            <h2 class="section-title section-title--dropdown section-title--expanded">Subject. <span>Владелец сертификата</span></h2>
+          </section>
+          <section class="section__block section__block--body section__block--no-padding">
+            <table class="info-table info-table--section info-table--reestr-cert">
+
+              <col class="info-table__col">
+              <col class="info-table__col">
+              <col class="info-table__col">
+              
+              <thead class="info-table__thead">
+                <tr class="info-table__tr">
+                  <th class="info-table__th">Обозначение (OID)</th>
+                  <th class="info-table__th">Наименование</th>
+                  <th class="info-table__th">Статус</th>
+                </tr>
+              </thead>
+              <tbody class="info-table__tbody">
+                <tr class="info-table__tr">
+                  <td class="info-table__td" data-th="Обозначение (OID)"><span>CN</span> (2.5.4.3)</td>
+                  <td class="info-table__td" data-th="Наименование">Общее имя</td>
+                  <td class="info-table__td" data-th="Статус">&lt;Введенное пользователем значение&gt;</td>
+                </tr>
+                <tr class="info-table__tr">
+                  <td class="info-table__td" data-th="Обозначение (OID)"><span>OU</span> (2.5.4.11)</td>
+                  <td class="info-table__td" data-th="Наименование">Подразделение организации</td>
+                  <td class="info-table__td" data-th="Статус"><span><i>Значение не указано</i></span></td>
+                </tr>
+                <tr class="info-table__tr">
+                  <td class="info-table__td" data-th="Обозначение (OID)"><span>T</span> (2.5.4.12)</td>
+                  <td class="info-table__td" data-th="Наименование">Должность</td>
+                  <td class="info-table__td" data-th="Статус"><p class="break-text">044071B905DD5BDABC7E216CAE0B46E01F46714EA9643C50806820D60DDC063CB105B09B2702F30D21205AAA073A4B4F5D813095B96FECC12543357FD09DC1F76434</p></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+        <section class="section">
+          <section class="section__block section__block--header section__block--toggler section__block--grey">
+            <h2 class="section-title section-title--dropdown section-title--expanded">SubjectPublicKeyInfo. <span>Сведения о ключе проверки электронной подписи</span></h2>
+          </section>
+          <section class="section__block section__block--body section__block--no-padding">
+            <table class="info-table info-table--section info-table--reestr-cert">
+
+              <col class="info-table__col">
+              <col class="info-table__col">
+              <col class="info-table__col">
+              
+              <thead class="info-table__thead">
+                <tr class="info-table__tr">
+                  <th class="info-table__th">Обозначение (OID)</th>
+                  <th class="info-table__th">Наименование</th>
+                  <th class="info-table__th">Значение</th>
+                </tr>
+              </thead>
+              <tbody class="info-table__tbody">
+                <tr class="info-table__tr">
+                  <td class="info-table__td" data-th="Обозначение (OID)"><span>Algorithm</span></td>
+                  <td class="info-table__td" data-th="Наименование">Используемый алгоритм</td>
+                  <td class="info-table__td" data-th="Значение">&lt;Введенное пользователем значение&gt;</td>
+                </tr>
+                <tr class="info-table__tr">
+                  <td class="info-table__td" data-th="Обозначение (OID)"><span>SubjectSignTool</span></td>
+                  <td class="info-table__td" data-th="Наименование">Используемое средство электронной подписи</td>
+                  <td class="info-table__td" data-th="Значение"><span><i>Значение не указано</i></span></td>
+                </tr>
+                <tr class="info-table__tr">
+                  <td class="info-table__td" data-th="Обозначение (OID)"><span>Algorithm</span></td>
+                  <td class="info-table__td" data-th="Наименование">Используемый алгоритм</td>
+                  <td class="info-table__td" data-th="Значение">&lt;Введенное пользователем значение&gt;</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+
+        <h2 class="subtitle">Расширение сертификата (extensions)</h2>
+
+        <section class="section">
+          <section class="section__block section__block--header section__block--toggler section__block--grey">
+            <h2 class="section-title section-title--dropdown section-title--expanded">ExtendedKeyUsage (2.5.29.37). <span>Расширение сферы применения ключа</span></h2>
+          </section>
+          <section class="section__block section__block--body section__block--no-padding">
+            <table class="info-table info-table--section info-table--reestr-cert">
+
+              <col class="info-table__col">
+              <col class="info-table__col">
+              
+              <thead class="info-table__thead">
+                <tr class="info-table__tr">
+                  <th class="info-table__th">OID</th>
+                  <th class="info-table__th">Наименование</th>
+                </tr>
+              </thead>
+              <tbody class="info-table__tbody">
+                <tr class="info-table__tr">
+                  <td class="info-table__td" data-th="OID"><span>&lt;OID&gt;</span></td>
+                  <td class="info-table__td" data-th="Наименование">&lt;Введенное пользователем значение&gt;</td>
+                </tr>
+                <tr class="info-table__tr">
+                  <td class="info-table__td" data-th="OID"><span>&lt;OID&gt;</span></td>
+                  <td class="info-table__td" data-th="Наименование">&lt;Введенное пользователем значение&gt;</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+        <section class="section">
+          <section class="section__block section__block--header section__block--toggler section__block--grey">
+            <h2 class="section-title section-title--dropdown section-title--expanded">KeyUsage (2.5.29.15). <span>Область использования ключа проверки ЭП</span></h2>
+          </section>
+          <section class="section__block section__block--body section__block--no-padding">
+            <table class="info-table info-table--section info-table--reestr-cert">
+
+              <col class="info-table__col">
+              <col class="info-table__col">
+              
+              <thead class="info-table__thead">
+                <tr class="info-table__tr">
+                  <th class="info-table__th">OID</th>
+                  <th class="info-table__th">Наименование</th>
+                </tr>
+              </thead>
+              <tbody class="info-table__tbody">
+                <tr class="info-table__tr">
+                  <td class="info-table__td" data-th="OID"><span>&lt;OID&gt;</span></td>
+                  <td class="info-table__td" data-th="Наименование">&lt;Введенное пользователем значение&gt;</td>
+                </tr>
+                <tr class="info-table__tr">
+                  <td class="info-table__td" data-th="OID"><span>&lt;OID&gt;</span></td>
+                  <td class="info-table__td" data-th="Наименование">&lt;Введенное пользователем значение&gt;</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+        <section class="section">
+          <section class="section__block section__block--header section__block--toggler section__block--grey">
+            <h2 class="section-title section-title--dropdown section-title--expanded">СertificatePolicies (2.5.29.32). <span>Политики сертификации</span></h2>
+          </section>
+          <section class="section__block section__block--body section__block--no-padding">
+            <table class="info-table info-table--section info-table--reestr-cert">
+
+              <col class="info-table__col">
+              <col class="info-table__col">
+              
+              <thead class="info-table__thead">
+                <tr class="info-table__tr">
+                  <th class="info-table__th">OID</th>
+                  <th class="info-table__th">Наименование</th>
+                </tr>
+              </thead>
+              <tbody class="info-table__tbody">
+                <tr class="info-table__tr">
+                  <td class="info-table__td" data-th="OID"><span>&lt;OID&gt;</span></td>
+                  <td class="info-table__td" data-th="Наименование">&lt;Введенное пользователем значение&gt;</td>
+                </tr>
+                <tr class="info-table__tr">
+                  <td class="info-table__td" data-th="OID"><span>&lt;OID&gt;</span></td>
+                  <td class="info-table__td" data-th="Наименование">&lt;Введенное пользователем значение&gt;</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+        <section class="section">
+          <section class="section__block section__block--header section__block--toggler section__block--grey">
+            <h2 class="section-title section-title--dropdown section-title--expanded">SubjectAlternativeName (2.5.29.17). <span>Иная информация о владельце сертификата</span></h2>
+          </section>
+          <section class="section__block section__block--body section__block--no-padding">
+            <table class="info-table info-table--section info-table--reestr-cert">
+
+              <col class="info-table__col">
+              <col class="info-table__col">
+              
+              <thead class="info-table__thead">
+                <tr class="info-table__tr">
+                  <th class="info-table__th">OID</th>
+                  <th class="info-table__th">Наименование</th>
+                </tr>
+              </thead>
+              <tbody class="info-table__tbody">
+                <tr class="info-table__tr">
+                  <td class="info-table__td" data-th="OID"><span>&lt;OID&gt;</span></td>
+                  <td class="info-table__td" data-th="Наименование">&lt;Введенное пользователем значение&gt;</td>
+                </tr>
+                <tr class="info-table__tr">
+                  <td class="info-table__td" data-th="OID"><span>&lt;OID&gt;</span></td>
+                  <td class="info-table__td" data-th="Наименование">&lt;Введенное пользователем значение&gt;</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+        <section class="section">
+          <section class="section__block section__block--header section__block--toggler section__block--grey">
+            <h2 class="section-title section-title--dropdown section-title--expanded">&lt;Расширение&gt; (&lt;OID&gt;). <span>&lt;Наименование расширения&gt;</span></h2>
+          </section>
+          <section class="section__block section__block--body section__block--no-padding">
+            <table class="info-table info-table--section info-table--reestr-cert">
+
+              <col class="info-table__col">
+              <col class="info-table__col">
+              
+              <thead class="info-table__thead">
+                <tr class="info-table__tr">
+                  <th class="info-table__th">OID</th>
+                  <th class="info-table__th">Наименование</th>
+                </tr>
+              </thead>
+              <tbody class="info-table__tbody">
+                <tr class="info-table__tr">
+                  <td class="info-table__td" data-th="OID"><span>&lt;OID&gt;</span></td>
+                  <td class="info-table__td" data-th="Наименование">&lt;Введенное пользователем значение&gt;</td>
+                </tr>
+                <tr class="info-table__tr">
+                  <td class="info-table__td" data-th="OID"><span>&lt;OID&gt;</span></td>
+                  <td class="info-table__td" data-th="Наименование">&lt;Введенное пользователем значение&gt;</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+
+        <h2 class="subtitle">История изменений</h2>
+
+        <section class="section">
+          <section class="section__block section__block--header section__block--toggler section__block--grey">
+            <h2 class="section-title section-title--dropdown section-title--expanded">История изменений</h2>
+          </section>
+          <section class="section__block section__block--body section__block--no-padding">
+            <table class="info-table info-table--section info-table--reestr-cert">
+
+              <col class="info-table__col">
+              <col class="info-table__col">
+              <col class="info-table__col">
+              
+              <thead class="info-table__thead">
+                <tr class="info-table__tr">
+                  <th class="info-table__th">Дата</th>
+                  <th class="info-table__th">Действие</th>
+                  <th class="info-table__th">Сведения о работнике УЦ</th>
+                </tr>
+              </thead>
+              <tbody class="info-table__tbody">
+                <tr class="info-table__tr">
+                  <td class="info-table__td" data-th="Дата">
+                    <time datetime="22.12.2018" class="date-inline">22.12.2018</time>
+                    <time datetime="21:43:29" class="date-inline"><span>21:43:29</span></time>
+                  </td>
+                  <td class="info-table__td" data-th="Действие">&lt;Значение&gt;</td>
+                  <td class="info-table__td" data-th="Сведения о работнике УЦ">
+                    <a class="link-inline" href="">
+                      <img src="../img/user.svg" alt="">
+                      <span>Посмотреть</span>
+                    </a>
+                  </td>
+                </tr>
+                <tr class="info-table__tr">
+                  <td class="info-table__td" data-th="Дата">
+                    <time datetime="22.12.2018" class="date-inline">22.12.2018</time>
+                    <time datetime="21:43:29" class="date-inline"><span>21:43:29</span></time>
+                  </td>
+                  <td class="info-table__td" data-th="Действие">&lt;Значение&gt;</td>
+                  <td class="info-table__td" data-th="Сведения о работнике УЦ">
+                    <a class="link-inline" href="">
+                      <img src="../img/user.svg" alt="">
+                      <span>Посмотреть</span>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer container">
+    <p class="copyright">©  2019 Компания «Информзащита»</p>
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../js/informdefend.js"></script>
+<script>
+informdefend();
+</script>
+</body>
+</html>

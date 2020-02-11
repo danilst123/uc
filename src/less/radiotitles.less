@@ -1,0 +1,56 @@
+.radiotitles {
+	display: flex;
+	align-items: center;
+	max-width: 100%;
+	overflow: auto;
+	padding: 0 12px;
+
+	&--no-padding {
+		padding: 0;
+	}
+
+	@media screen and @xxs-max {
+		padding: 0;
+	}
+
+	&__item {
+		display: inline-block;
+		cursor: pointer;
+		flex-shrink: 0;
+
+		&:not(:last-child) {
+			margin-right: 36px;
+
+			@media screen and @xxs-max {
+				margin-right: 15px;
+			}
+		}
+	}
+
+	&__radio {
+		display: none;
+	}
+
+	&__title {
+		display: inline-block;
+		color: #a2a4ac;
+		font-family: @main_font;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 1;
+		text-transform: uppercase;
+		border-bottom: 4px solid transparent;
+		transition: all 0.3s;
+		padding-bottom: 12px;
+
+		@media screen and @xxs-max {
+			font-size: 12px;
+		}
+	}
+
+	&__radio:checked + &__title,
+	&__item--active &__title {
+		color: #ffffff;
+		border-color: #4b9efa;
+	}
+}

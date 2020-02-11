@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit:contain">
+
+  <title>Реестр запросов</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet"> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="../css/informdefend.css" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- ШАПКА -->
+    <header class="header">
+      <section class="header__panel"> 
+        <div class="container header__container header__container--panel">
+          <a href="/" class="logo">
+            <img src="../img/logo.png" alt="Информазащита">
+          </a>
+          <div class="hamburger hamburger--panel">
+            <div class="hamburger__item"></div>
+            <div class="hamburger__item"></div>
+            <div class="hamburger__item"></div>
+          </div>  
+        </div>
+      </section>
+      <section class="header__mobile-menu">
+        <div class="hamburger hamburger--mobile-menu">
+          <div class="hamburger__item"></div>
+          <div class="hamburger__item"></div>
+          <div class="hamburger__item"></div>
+        </div>  
+        <div class="container header__container header__container--mobile-menu">
+          <nav class="main-menu">
+            <a href="" class="main-menu__home"></a>
+            <ul class="main-menu__list">
+              <li class="main-menu__item main-menu__item--active"><a class="main-menu__link" href="/">Реестр Запросов</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="/">Реестр Сертификатов </a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="/">Реестр САС</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="/">Реестр шаблонов</a></li>
+              <li class="main-menu__item main-menu__item--adm main-menu__item--with-submenu">
+                <a class="main-menu__link" href="/" >Администрирование</a>
+                <div class="main-menu__submenu-toggler"></div>
+                <ul class="submenu">
+                  <li class="submenu__item"><a href="">Управление пользователями</a></li>
+                  <li class="submenu__item"><a href="">Зоны видимости</a></li>
+                </ul>
+              </li>
+            </ul> 
+          </nav>
+          <div class="user-block user-block--header">
+            <div class="user-block__name">Иванов Сергей Иванович</div>
+            <div class="user-block__title">Администратор</div>
+            <div class="round-toggler round-toggler--header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7"><g><g><path fill="#abafba" d="M0 1.82l5 5 5-5L8.828.648 5 4.476 1.172.648z"/></g></g></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- КОНТЕНТ -->
+    <main class="page">
+      <div class="container">
+
+        <!-- ЗАГОЛОВОК СТРАНИЦЫ -->
+        <h1 class="main-title">Реестр запросов</h1>
+        
+        <!-- ПОИСК -->
+        <form class="search-form form">
+          <section class="search-form__search">
+            <section class="section">
+              <section class="section__block section__block--header section__block--bottomed section__block--dark">
+                <div class="radiotitles">
+                  <label class="radiotitles__item">
+                    <input class="radiotitles__radio" type="radio" value="1" name="radiotitle" checked>
+                    <span class="radiotitles__title">На издание сертификатов</span>
+                  </label>
+                  <label class="radiotitles__item">
+                    <input class="radiotitles__radio" type="radio" value="2" name="radiotitle">
+                    <span class="radiotitles__title">На изменение статуса сертификата</span>
+                  </label>
+                </div>
+              </section>
+              <section class="section__block section__block--body section__block--square-padding section__block--light">
+                <div class="search-block">
+                  <div class="search-block__field">
+                    <input type="text" value="Ура!" placeholder="Введите # запроса, Серийный номер сертификата, ID шаблона, имя владельца сертификата" class="search-block__input">
+                    <button class="search-block__reset"></button>
+                  </div>
+                  <button type="submit" class="search-block__btn btn"></button>
+                </div>
+                <div class="search-form__settings">
+
+                  <div class="radiobuttons-list radiobuttons-list--search">
+                    <label class="radiobuttons-list__item radiobutton">
+                      <input type="radio" name="foo" class="radiobutton__input" checked>
+                      <span class="radiobutton__radio"></span>
+                      <span class="radiobutton__text">Все условия («И»):</span>
+                    </label>
+                    <label class="radiobuttons-list__item radiobutton">
+                      <input type="radio" name="foo" class="radiobutton__input">
+                      <span class="radiobutton__radio"></span>
+                      <span class="radiobutton__text">Любое из условий («ИЛИ»):</span>
+                    </label>
+                  </div>
+
+                  <table class="form-table form-table--bordered-gap form-table--search">
+                    
+                    <col class="form-table__col">
+                    <col class="form-table__col">
+                    <col class="form-table__col">
+                    <col class="form-table__col">
+                    <col class="form-table__col">
+
+                    <thead class="form-table__thead">
+                      <tr class="form-table__tr">
+                        <th class="form-table__th">Параметр <small>(группа параметров)</small></th>
+                        <th class="form-table__th">Дополнительный параметр <small>(если требуется)</small></th>
+                        <th class="form-table__th">Оператор</th>
+                        <th class="form-table__th" colspan="2">Значение</th>
+                      </tr>
+                    </thead>
+                    <tbody class="form-table__tbody">
+                      <tr class="form-table__tr">
+                        <td class="form-table__td" data-th="Параметр (группа параметров)">
+                          <div class="select">
+                            <select data-placeholder="Выберите параметр или группу параметров">
+                              <option></option>
+                              <option value="1" selected>Дата создания запроса</option>
+                              <option value="2">Статус запроса</option>
+                              <option value="3">Зона видимости</option>
+                              <option value="4">Сведения о владельце сертификата</option>
+                              <option value="5">Реквизиты изготовленного сертификата</option>
+                              <option value="6">Шаблон</option>
+                              <option value="7">Extended key usage (2.5.29.37) </option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Дополнительный параметр (если требуется)">
+                          <div class="select select--disabled">
+                            <select data-placeholder="" disabled>
+                              <option></option>
+                              <option value="1">Название</option>
+                              <option value="2">Номер</option>
+                              <option value="3">Версия</option>
+                              <option value="4">1.2.643.100.113.1 (СНИЛС)</option>
+                              <option value="5">Серийный номер сертификата (DEX)</option>
+                              <option value="6">Новый</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Оператор">
+                          <div class="select">
+                            <select data-placeholder="">
+                              <option></option>
+                              <option value="1" selected><=</option>
+                              <option value="2">=</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Значение">
+                          <label class="datepicker-field">
+                            <input class="datepicker-field__input">
+                          </label>
+                        </td>
+                        <td class="form-table__td">
+                          <div class="delete-btn"></div>
+                        </td>
+                      </tr>
+                      <tr class="form-table__tr">
+                        <td class="form-table__td" data-th="Параметр (группа параметров)">
+                          <div class="select">
+                            <select data-placeholder="Выберите параметр или группу параметров">
+                              <option></option>
+                              <option value="1">Дата создания запроса</option>
+                              <option value="2" selected>Статус запроса</option>
+                              <option value="3">Зона видимости</option>
+                              <option value="4">Сведения о владельце сертификата</option>
+                              <option value="5">Реквизиты изготовленного сертификата</option>
+                              <option value="6">Шаблон</option>
+                              <option value="7">Extended key usage (2.5.29.37) </option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Дополнительный параметр (если требуется)">
+                          <div class="select select--disabled">
+                            <select data-placeholder="" disabled>
+                              <option></option>
+                              <option value="1">Название</option>
+                              <option value="2">Номер</option>
+                              <option value="3">Версия</option>
+                              <option value="4">1.2.643.100.113.1 (СНИЛС)</option>
+                              <option value="5">Серийный номер сертификата (DEX)</option>
+                              <option value="6">Новый</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Оператор">
+                          <div class="select">
+                            <select data-placeholder="">
+                              <option></option>
+                              <option value="1"><=</option>
+                              <option value="2" selected>=</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Значение">
+                          <div class="select">
+                            <select data-placeholder="">
+                              <option></option>
+                              <option value="1">Название</option>
+                              <option value="2">Номер</option>
+                              <option value="3">Версия</option>
+                              <option value="4">1.2.643.100.113.1 (СНИЛС)</option>
+                              <option value="5">Серийный номер сертификата (DEX)</option>
+                              <option value="6" selected>Новый</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td">
+                          <div class="delete-btn"></div>
+                        </td>
+                      </tr>
+                      <tr class="form-table__tr">
+                        <td class="form-table__td" data-th="Параметр (группа параметров)">
+                          <div class="select">
+                            <select data-placeholder="Выберите параметр или группу параметров">
+                              <option></option>
+                              <option value="1">Дата создания запроса</option>
+                              <option value="2">Статус запроса</option>
+                              <option value="3" selected>Зона видимости</option>
+                              <option value="4">Сведения о владельце сертификата</option>
+                              <option value="5">Реквизиты изготовленного сертификата</option>
+                              <option value="6">Шаблон</option>
+                              <option value="7">Extended key usage (2.5.29.37) </option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Дополнительный параметр (если требуется)">
+                          <div class="select select--disabled">
+                            <select data-placeholder="" disabled>
+                              <option></option>
+                              <option value="1">Название</option>
+                              <option value="2">Номер</option>
+                              <option value="3">Версия</option>
+                              <option value="4">1.2.643.100.113.1 (СНИЛС)</option>
+                              <option value="5">Серийный номер сертификата (DEX)</option>
+                              <option value="6">Новый</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Оператор">
+                          <div class="select">
+                            <select data-placeholder="">
+                              <option></option>
+                              <option value="1"><=</option>
+                              <option value="2" selected>=</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Значение">
+                          <div class="select">
+                            <select data-placeholder="">
+                              <option></option>
+                              <option value="1">Название</option>
+                              <option value="2">Номер</option>
+                              <option value="3">Версия</option>
+                              <option value="4">1.2.643.100.113.1 (СНИЛС)</option>
+                              <option value="5">Серийный номер сертификата (DEX)</option>
+                              <option value="6">Новый</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td">
+                          <div class="delete-btn"></div>
+                        </td>
+                      </tr>
+                      <tr class="form-table__tr">
+                        <td class="form-table__td" data-th="Параметр (группа параметров)">
+                          <div class="select">
+                            <select data-placeholder="Выберите параметр или группу параметров">
+                              <option></option>
+                              <option value="1">Дата создания запроса</option>
+                              <option value="2">Статус запроса</option>
+                              <option value="3">Зона видимости</option>
+                              <option value="4" selected>Сведения о владельце сертификата</option>
+                              <option value="5">Реквизиты изготовленного сертификата</option>
+                              <option value="6">Шаблон</option>
+                              <option value="7">Extended key usage (2.5.29.37) </option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Дополнительный параметр (если требуется)">
+                          <div class="select">
+                            <select data-placeholder="">
+                              <option></option>
+                              <option value="1">Название</option>
+                              <option value="2">Номер</option>
+                              <option value="3">Версия</option>
+                              <option value="4" selected>1.2.643.100.113.1 (СНИЛС)</option>
+                              <option value="5">Серийный номер сертификата (DEX)</option>
+                              <option value="6">Новый</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Оператор">
+                          <div class="select">
+                            <select data-placeholder="">
+                              <option></option>
+                              <option value="1"><=</option>
+                              <option value="2" selected>=</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Значение">
+                          <div class="select">
+                            <select data-placeholder="">
+                              <option></option>
+                              <option value="1">Название</option>
+                              <option value="2">Номер</option>
+                              <option value="3">Версия</option>
+                              <option value="4">1.2.643.100.113.1 (СНИЛС)</option>
+                              <option value="5">Серийный номер сертификата (DEX)</option>
+                              <option value="6">Новый</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td">
+                          <div class="delete-btn"></div>
+                        </td>
+                      </tr>
+                      <tr class="form-table__tr">
+                        <td class="form-table__td" data-th="Параметр (группа параметров)">
+                          <div class="select">
+                            <select data-placeholder="Выберите параметр или группу параметров">
+                              <option></option>
+                              <option value="1">Дата создания запроса</option>
+                              <option value="2">Статус запроса</option>
+                              <option value="3">Зона видимости</option>
+                              <option value="4">Сведения о владельце сертификата</option>
+                              <option value="5" selected>Реквизиты изготовленного сертификата</option>
+                              <option value="6">Шаблон</option>
+                              <option value="7">Extended key usage (2.5.29.37) </option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Дополнительный параметр (если требуется)">
+                          <div class="select">
+                            <select data-placeholder="">
+                              <option></option>
+                              <option value="1">Название</option>
+                              <option value="2">Номер</option>
+                              <option value="3">Версия</option>
+                              <option value="4">1.2.643.100.113.1 (СНИЛС)</option>
+                              <option value="5" selected>Серийный номер сертификата (DEX)</option>
+                              <option value="6">Новый</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Оператор">
+                          <div class="select">
+                            <select data-placeholder="">
+                              <option></option>
+                              <option value="1"><=</option>
+                              <option value="2" selected>=</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Значение">
+                          <div class="select">
+                            <select data-placeholder="">
+                              <option></option>
+                              <option value="1">Название</option>
+                              <option value="2">Номер</option>
+                              <option value="3">Версия</option>
+                              <option value="4">1.2.643.100.113.1 (СНИЛС)</option>
+                              <option value="5">Серийный номер сертификата (DEX)</option>
+                              <option value="6">Новый</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td">
+                          <div class="delete-btn"></div>
+                        </td>
+                      </tr>
+                      <tr class="form-table__tr">
+                        <td class="form-table__td" data-th="Параметр (группа параметров)">
+                          <div class="select">
+                            <select data-placeholder="Выберите параметр или группу параметров">
+                              <option></option>
+                              <option value="1">Дата создания запроса</option>
+                              <option value="2">Статус запроса</option>
+                              <option value="3">Зона видимости</option>
+                              <option value="4">Сведения о владельце сертификата</option>
+                              <option value="5">Реквизиты изготовленного сертификата</option>
+                              <option value="6">Шаблон</option>
+                              <option value="7">Extended key usage (2.5.29.37) </option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Дополнительный параметр (если требуется)">
+                          <div class="select">
+                            <select data-placeholder="">
+                              <option></option>
+                              <option value="1">Название</option>
+                              <option value="2">Номер</option>
+                              <option value="3">Версия</option>
+                              <option value="4">1.2.643.100.113.1 (СНИЛС)</option>
+                              <option value="5">Серийный номер сертификата (DEX)</option>
+                              <option value="6">Новый</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Оператор">
+                          <div class="select">
+                            <select data-placeholder="">
+                              <option></option>
+                              <option value="1"><=</option>
+                              <option value="2">=</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Значение">
+                          <div class="select">
+                            <select data-placeholder="">
+                              <option></option>
+                              <option value="1">Название</option>
+                              <option value="2">Номер</option>
+                              <option value="3">Версия</option>
+                              <option value="4">1.2.643.100.113.1 (СНИЛС)</option>
+                              <option value="5">Серийный номер сертификата (DEX)</option>
+                              <option value="6">Новый</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td">
+                          <div class="delete-btn"></div>
+                        </td>
+                      </tr>
+                      <tr class="form-table__tr">
+                        <td class="form-table__td" colspan="5">
+                          <button class="add-row text-btn text-btn--blue">
+                            <img src="../img/plus.svg" class="text-btn__img">
+                            <span class="text-btn__text">Добавить параметр</span>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <section class="form__control">
+                    <button type="reset" class="reset-form text-btn text-btn--big">
+                      <img src="../img/delete.svg" alt="" class="text-btn__img">
+                      <span class="text-btn__text">Очистить</span>
+                    </button>
+                    <input type="submit" value="Найти" class="btn">
+                  </section>
+                </div>
+              </section>
+            </section>
+          </section>
+          <div class="search-form__expand round-toggler round-toggler--big">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7"><g><g><path fill="#abafba" d="M0 1.82l5 5 5-5L8.828.648 5 4.476 1.172.648z"/></g></g></svg>
+          </div>
+        </form>
+
+        <!-- кнопки -->
+        <div class="btns-row btns-row--bordered">
+          <button class="btn btn--blue-bordered">
+            <img src="../img/blue-plus.svg" alt="">
+            <span>Зарегистрировать запрос на издание</span>
+          </button>
+        </div>
+                
+        <!-- РЕЗУЛЬТАТЫ ПОИСКА -->
+        <div class="search-result">
+          <div class="search-result__no-results">
+            <img src="../img/smiley.svg" alt="">
+            <p>К сожалению, нет данных для отображения.</p>
+          </div>         
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer container">
+    <p class="copyright">©  2019 Компания «Информзащита»</p>
+  </footer>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../js/informdefend.js"></script>
+<script>
+informdefend();
+</script>
+</body>
+</html>

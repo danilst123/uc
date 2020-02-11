@@ -1,0 +1,55 @@
+.datepicker-field {
+	.form-field;
+	width: 100%;
+	max-width: 100%;
+	padding: 0 34px 0 12px;
+	position: relative;
+	cursor: pointer;
+
+	&:after {
+    content: '';
+    width: 36px;
+    height: 100%;
+    background-image: url(../img/calendar.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px auto;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+	}
+
+  &--with-time:after {
+    background-image: url(../img/calendar-clock.svg);
+    background-size: 25px auto;
+  }
+
+  &--disabled {
+    border-color: #e6e6e6;
+    background-color: #efefef;
+    cursor: default;
+
+    &:after {
+      opacity: 0.6;
+    }
+  }
+
+	&__input {
+		color: inherit;
+		font-family: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+		background: none;
+		border: none;
+		display: block;
+		height: 100%;
+		width: 100%;
+	}	
+
+  &--disabled &__input {
+    background-color: #efefef;
+    cursor: default;
+  }
+}
+

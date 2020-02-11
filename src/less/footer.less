@@ -1,0 +1,25 @@
+.footer {
+	position: relative;
+	padding: 20px;
+
+	@media screen and @xs-max {
+    padding: 15px;
+	}
+
+	&:before {
+		content: '';
+		display: block;
+		height: 1px;
+		width: calc(100% - 40px);
+		background-color: #e6e6e6;
+		position: absolute;
+		left: 20px;
+		top: 0;
+
+		@media screen and @xs-max {
+	    width: calc(100% - 30px);
+	    left: 15px;
+		}
+	}
+
+}

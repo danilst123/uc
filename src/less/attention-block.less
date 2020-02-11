@@ -1,0 +1,57 @@
+.attention-block {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #e24954;
+  font-family: @main_font;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  background-repeat: no-repeat;
+  background-position: top left;
+
+  @media screen and @xxs-max {
+    font-size: 14px;
+  }
+
+  &--important {
+    min-height: 54px;
+    padding-left: 72px;
+    background-image: url(../img/important.svg);
+  }
+
+  &--delete {
+    min-height: 48px;
+    padding-left: 64px;
+    background-image: url(../img/delete-template.svg);
+  }
+
+  &--modal {
+    margin-top: 8px;
+    margin-bottom: 30px;
+
+    @media screen and @xxs-max {
+      margin-bottom: 20px;
+    }
+  }
+
+  &--importantGrey {
+    color: #abafba;
+    font-size: 12px;
+    line-height: 16px;
+    min-height: 30px;
+    padding-left: 32px;
+    background-image: url(../img/important-grey.svg);
+  }
+
+  &__title {
+    max-width: 100%;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  &__text {
+    max-width: 100%;
+  }
+}

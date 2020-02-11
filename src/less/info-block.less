@@ -1,0 +1,35 @@
+.info-block {
+  min-height: 70px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #50535b;
+  font-family: @main_font;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  background-repeat: no-repeat;
+  background-position: top left 13px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 35px;
+  padding-left: 100px;
+
+  &--info {
+    background-image: url(../img/big-info.svg);
+  }
+
+  &--delete {
+    background-image: url(../img/big-delete.svg);
+  }
+
+  &--question {
+    background-image: url(../img/big-question.svg);
+  }
+
+  @media screen and @xxs-max {
+    background-size: 55px 55px;
+    background-position: left top;
+    padding-left: 70px;
+  }
+}

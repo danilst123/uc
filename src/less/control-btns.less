@@ -1,0 +1,133 @@
+.control-btns {
+  max-width: 100%; // ie fix
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin: -1.5px;
+
+  @media screen and @xs-max {
+    margin: -5px;
+  }
+
+  &--request {
+    margin-left: 20px;
+
+    @media screen and @xs-max {
+      margin-left: -5px;
+    }
+  }
+
+  &--end {
+    justify-content: flex-end;
+  }
+
+  &__btn {
+    height: 27px;
+    width: 27px;
+    max-width: 100%; // ie fix
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    margin: 1.5px;
+
+    &--agree {
+      background-color: #85c762;
+      background-image: url(../img/check.svg);
+      background-size: 20px auto;
+      box-shadow: 0 2px 5px rgba(133, 199, 98, 0.7);
+
+      &:hover {
+        background-color: lighten(#85c762, 10%);
+      }
+    }
+
+    &--deny {
+      background-color: #f6332e;
+      background-image: url(../img/deny.svg);
+      background-size: 15px auto;
+      box-shadow: 0 2px 5px rgba(246, 51, 46, 0.47);
+
+      &:hover {
+        background-color: lighten(#f6332e, 10%);
+      }
+    }
+
+    &--print {
+      background-image: url(../img/print.svg);
+      background-color: #5a5c63;
+
+      &:hover {
+        background-color: lighten(#5a5c63, 10%);
+      }
+    }
+
+    &--back {
+      background-color: #478dda;
+      background-image: url(../img/back.svg);
+      background-size: 14px auto;
+      box-shadow: 0 2px 5px rgba(71, 141, 218, 0.47);
+
+      &:hover {
+        background-color: lighten(#478dda, 10%);
+      }
+    }
+
+    &--download {
+      background-color: #5a5c63;
+      background-image: url(../img/download-white.svg);
+      background-size: 13px auto;
+
+      &:hover {
+        background-color: lighten(#5a5c63, 10%);
+      }
+    }
+
+    &--seen {
+      background-color: #5a5c63;
+      background-image: url(../img/seen.svg);
+
+      &:hover {
+        background-color: lighten(#5a5c63, 10%);
+      }
+    }
+
+    &--edit {
+      background-color: #5a5c63;
+      background-image: url(../img/edit.svg);
+
+      &:hover {
+        background-color: lighten(#5a5c63, 10%);
+      }
+    }
+
+    &--edit-blue {
+      background-color: #478dda;
+      background-image: url(../img/edit.svg);
+      background-size: 14px auto;
+
+      &:hover {
+        background-color: lighten(#478dda, 10%);
+      }
+    }
+
+    @media screen and @xs-max {
+      margin: 5px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+
+    & + .control-btns__box {
+      margin-left: 18px;
+
+      @media screen and @xs-max {
+        margin-left: 0;
+      }
+    }
+  } 
+
+}

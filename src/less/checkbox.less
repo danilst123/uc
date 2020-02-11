@@ -1,0 +1,128 @@
+.checkbox {
+	max-width: 100%; //ie fix
+	display: inline-flex;
+	align-items: center;
+
+	&__input {
+		display: none;
+	}
+
+	&__icon {
+		width: 18px;
+		height: 18px;
+		border: 2px solid #abafba;
+		border-radius: 3px;
+		background-color: #f6f6f6;
+		position: relative;
+		z-index: 1;
+		transition: all 0.2s;
+		cursor: pointer;
+		flex-shrink: 0;
+		cursor: pointer;
+		margin-right: 7px;
+
+		&:after {
+			content: '';
+			display: block;
+			height: 100%;
+			width: 100%;
+			flex-shrink: 0;
+			position: absolute;
+			z-index: 1;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) scale(0) rotate(-45deg);
+			transition: all 0.2s;
+			background-image: url(../img/check.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 20px auto;
+		}
+	}
+
+	&__title {
+		color: #50535b;
+		font-family: @main_font;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.2;
+		margin-top: 1px;
+	}
+
+	&__input:checked + &__icon {
+		background-color: #4b9efa;
+		border-color: #4b9efa;
+
+		&:after {
+			transform: translate(-50%, -50%) scale(1) rotate(0deg);
+		}
+	}
+
+	&__input:disabled + &__icon {
+		opacity: 0.4;
+		cursor: default;
+	}
+
+	&__error {
+		margin: 5px 0 0 0 !important;
+	}
+
+	&--title {
+		align-items: flex-start;
+
+		.checkbox__icon {
+			border: none;
+			margin-right: 9px;
+			&:after {
+				background-image: url(../img/check-black.svg);
+			}
+		}
+		.checkbox__title {
+			color: #ffffff;
+			font-size: 13px;
+			text-transform: uppercase;
+			margin-top: 2px;
+		}
+	}
+
+	&--box {
+		display: flex;
+		position: relative;
+		padding: 11px 20px;
+		background-color: #f6f6f6;
+
+		.checkbox__icon {
+			margin-right: 11px;
+		}
+
+		.checkbox__bg {
+			display: block;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			z-index: 0;
+			top: 0;
+			left: 0;
+			background-color: transparent;
+			transition: background-color 0.3s;
+		}
+
+		.checkbox__title {
+			color: #6a6c74;
+			font-size: 16px;
+			position: relative;
+			z-index: 1;
+			flex-shrink: unset;
+
+			strong {
+				font-weight: 700;
+			}
+		}		
+
+		.checkbox__input:checked ~ .checkbox__bg {
+			background-color: #e6e6e6;
+		}
+	}
+}
+
+

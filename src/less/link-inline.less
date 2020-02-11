@@ -1,0 +1,29 @@
+.link-inline {
+  display: inline-flex;
+  align-items: center;
+  color: #478dda;
+  text-decoration: none !important;
+  vertical-align: middle;
+
+  &:hover {
+    text-decoration: underline !important;
+  }
+
+  & + & {
+    display: flex;
+    margin-top: 5px;
+  }
+
+  img {
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+
+  span {
+    color: inherit;
+
+    span {
+      color: #abafba;
+    }
+  }
+}

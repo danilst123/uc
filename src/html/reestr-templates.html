@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit:contain">
+
+  <title>Реестр шаблонов</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="../css/informdefend.css" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- ШАПКА -->
+    <header class="header">
+      <section class="header__panel"> 
+        <div class="container header__container header__container--panel">
+          <a href="/" class="logo">
+            <img src="../img/logo.png" alt="Информазащита">
+          </a>
+          <div class="hamburger hamburger--panel">
+            <div class="hamburger__item"></div>
+            <div class="hamburger__item"></div>
+            <div class="hamburger__item"></div>
+          </div>  
+        </div>
+      </section>
+      <section class="header__mobile-menu">
+        <div class="hamburger hamburger--mobile-menu">
+          <div class="hamburger__item"></div>
+          <div class="hamburger__item"></div>
+          <div class="hamburger__item"></div>
+        </div>  
+        <div class="container header__container header__container--mobile-menu">
+          <nav class="main-menu">
+            <a href="" class="main-menu__home"></a>
+            <ul class="main-menu__list">
+              <li class="main-menu__item"><a href="/">Реестр Запросов</a></li>
+              <li class="main-menu__item"><a href="/">Реестр Сертификатов </a></li>
+              <li class="main-menu__item"><a href="/">Реестр САС</a></li>
+              <li class="main-menu__item main-menu__item--active"><a href="/">Реестр шаблонов</a></li>
+            </ul> 
+          </nav>
+          <a href="/" class="administration-link">Администрирование</a>
+          <div class="user-block user-block--header">
+            <div class="user-block__name">Иванов Сергей Иванович</div>
+            <div class="user-block__title">Администратор</div>
+            <div class="round-toggler round-toggler--header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7"><g><g><path fill="#abafba" d="M0 1.82l5 5 5-5L8.828.648 5 4.476 1.172.648z"/></g></g></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- КОНТЕНТ -->
+    <main class="page">
+      <div class="container">
+
+        <!-- ЗАГОЛОВОК СТРАНИЦЫ -->
+        <h1 class="main-title">Реестр шаблонов</h1>
+        
+        <!-- ПОИСК -->
+        <form class="search-form search-form--no-toggler form">
+          <section class="search-form__search section">
+            <div class="section__block section__block--body section__block--square-padding section__block--light">
+              <div class="search-block">
+                <input type="search" placeholder="Введите # шаблона, отображаемое имя" class="search-block__input">
+              </div>
+              <div class="checkbox-list checkbox-list--reestr-templates">
+                <label class="checkbox checkbox-list__item">
+                  <input type="checkbox" class="checkbox__input">
+                  <span class="checkbox__icon"></span>
+                  <span class="checkbox__title">Новый</span>
+                </label>
+                <label class="checkbox checkbox-list__item">
+                  <input type="checkbox" class="checkbox__input">
+                  <span class="checkbox__icon"></span>
+                  <span class="checkbox__title">Опубликован</span>
+                </label>
+                <label class="checkbox checkbox-list__item">
+                  <input type="checkbox" class="checkbox__input">
+                  <span class="checkbox__icon"></span>
+                  <span class="checkbox__title">Отозван</span>
+                </label>
+              </div>
+              <div class="form__control">
+                <button type="reset" class="reset-form text-btn text-btn--big">
+                  <img src="../img/delete.svg" alt="" class="text-btn__img">
+                  <span class="text-btn__text">Очистить</span>
+                </button>
+                <input type="submit" value="Найти" class="btn">
+              </div>
+            </div>
+          </section>
+        </form>
+        
+        <!-- кнопки -->
+        <div class="btns-row btns-row--bordered">
+          <button class="btn btn--blue-bordered">
+            <img src="../img/download.svg" alt="">
+            <span>Импортировать шаблон</span>
+          </button>
+        </div>
+        
+        <!-- РЕЗУЛЬТАТЫ ПОИСКА -->
+        <div class="search-result">
+
+          <!-- верхний контрол -->
+          <section class="result-control result-control--top">
+            <p class="result-control__count">Всего найдено записей: 213</p>
+            <div class="sort">
+              <div class="sort__item">
+                <span class="sort__title">Сортировать по</span>
+                <label class="sort__direction">
+                  <input type="checkbox" name="" id="">
+                  <span></span> 
+                </label>
+                <div class="select select--grey select--sort">
+                  <select>
+                    <option value="1">дате создания</option>
+                    <option value="2">дате создания 2</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- список запросов -->              
+          <section class="section">
+            <section class="section__block section__block--header section__block--dark">
+              <h2 class="section-title section-title--light">
+                <div class="status-indicator status-indicator--green">
+                  Шаблон запроса на издание сертификата <div class="break-text"><strong>№ 1.2.643.2.2.50.1.9.7468429.16633693</strong></div>  Версия 2
+                </div>
+              </h2>
+              <div class="status-text status-text--adm status-text--green">Опубликован</div>
+            </section>
+            <div class="section__block section__block--body">
+              <table class="info-table">
+
+                <col class="info-table__col">
+                <col class="info-table__col">
+                <col class="info-table__col">
+
+                <thead class="info-table__thead">
+                  <tr class="info-table__tr">
+                    <th class="info-table__th">Отображаемое имя</th>
+                    <th class="info-table__th">Зоны видимости</th>
+                    <th class="info-table__th">Даты</th>
+                  </tr>
+                </thead>
+                <tbody class="info-table__tbody">
+                  <tr class="info-table__tr">
+                    <td class="info-table__td" data-th="Отображаемое имя">Сертификата ЮЛ (должностное лицо)</td>
+                    <td class="info-table__td" data-th="Зоны видимости">
+                      <ul class="expand-list" data-is-certificate="false"  data-length="5">
+                        <li>Москва</li>
+                        <li>Санкт-Петербург</li>
+                        <li>Тверь</li>
+                      </ul>
+                    </td>
+                    <td class="info-table__td" data-th="Даты">
+                      <table class="info-table info-table--inner info-table--date">
+                        <col class="info-table__col">
+                        <col class="info-table__col">
+                        <tbody class="info-table__tbody">
+                          <tr class="info-table__tr">
+                            <td class="info-table__td">
+                              <span>Создан:</span>
+                            </td>
+                            <td class="info-table__td">21.02.2019  13:13</td>
+                          </tr>
+                          <tr class="info-table__tr">
+                            <td class="info-table__td">
+                              <span>Опубликован:</span>
+                            </td>
+                            <td class="info-table__td">21.02.2019  14:07</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="section__block section__block--footer section__block--end section__block--grey">
+              <div class="control-btns control-btns--request">
+                <div class="control-btns__box">
+                  <button class="control-btns__btn control-btns__btn--seen"></button>
+                  <button class="control-btns__btn control-btns__btn--edit"></button>
+                  <button class="control-btns__btn control-btns__btn--download"></button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section">
+            <section class="section__block section__block--header section__block--dark">
+              <h2 class="section-title section-title--light">
+                <div class="status-indicator status-indicator--orange">
+                  Шаблон запроса на издание сертификата <div class="break-text"><strong>№ 1.2.643.2.2.50.1.9.7468429.16633694</strong></div>  Версия 2
+                </div>
+              </h2>
+              <div class="status-text status-text--adm status-text--orange">Новый</div>
+            </section>
+            <div class="section__block section__block--body">
+              <table class="info-table">
+
+                <col class="info-table__col">
+                <col class="info-table__col">
+                <col class="info-table__col">
+
+                <thead class="info-table__thead">
+                  <tr class="info-table__tr">
+                    <th class="info-table__th">Отображаемое имя</th>
+                    <th class="info-table__th">Зоны видимости</th>
+                    <th class="info-table__th">Даты</th>
+                  </tr>
+                </thead>
+                <tbody class="info-table__tbody">
+                  <tr class="info-table__tr">
+                    <td class="info-table__td" data-th="Отображаемое имя">Сертификата ФЛ</td>
+                    <td class="info-table__td" data-th="Зоны видимости">
+                      <ul class="expand-list" data-is-certificate="false"  data-length="5">
+                        <li>Москва</li>
+                        <li>Санкт-Петербург</li>
+                      </ul>
+                    </td>
+                    <td class="info-table__td" data-th="Даты">
+                      <table class="info-table info-table--inner info-table--date">
+                        <col class="info-table__col">
+                        <col class="info-table__col">
+                        <tbody class="info-table__tbody">
+                          <tr class="info-table__tr">
+                            <td class="info-table__td">
+                              <span>Создан:</span>
+                            </td>
+                            <td class="info-table__td">21.02.2019  13:13</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="section__block section__block--footer section__block--end section__block--grey">
+              <div class="control-btns control-btns--request">
+                <div class="control-btns__box">
+                  <button class="control-btns__btn control-btns__btn--agree"></button>
+                  <button class="control-btns__btn control-btns__btn--deny"></button>
+                </div>
+                <div class="control-btns__box">
+                  <button class="control-btns__btn control-btns__btn--edit"></button>
+                  <button class="control-btns__btn control-btns__btn--download"></button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section">
+            <section class="section__block section__block--header section__block--dark">
+              <h2 class="section-title section-title--light">
+                <div class="status-indicator status-indicator--red">
+                  Шаблон запроса на издание сертификата <div class="break-text"><strong>№ 1.2.643.2.2.50.1.9.7468429.16633691</strong></div>  Версия 2
+                </div>
+              </h2>
+              <div class="status-text status-text--adm status-text--red">Отозван</div>
+            </section>
+            <div class="section__block section__block--body">
+              <table class="info-table">
+
+                <col class="info-table__col">
+                <col class="info-table__col">
+                <col class="info-table__col">
+
+                <thead class="info-table__thead">
+                  <tr class="info-table__tr">
+                    <th class="info-table__th">Отображаемое имя</th>
+                    <th class="info-table__th">Зоны видимости</th>
+                    <th class="info-table__th">Даты</th>
+                  </tr>
+                </thead>
+                <tbody class="info-table__tbody">
+                  <tr class="info-table__tr">
+                    <td class="info-table__td" data-th="Отображаемое имя">Сертификата ЮЛ (должностное лицо)</td>
+                    <td class="info-table__td" data-th="Зоны видимости">
+                      <ul class="expand-list" data-is-certificate="false"  data-length="5">
+                        <li>Москва</li>
+                        <li>Тверь</li>
+                        <li>Калуга</li>
+                        <li>Омск</li>
+                        <li>Самара</li>
+                        <li>Челябинск</li>
+                        <li>Санкт-Петербург</li>
+                        <li>Анапа</li>
+                      </ul>
+                    </td>
+                    <td class="info-table__td" data-th="Даты">
+                      <table class="info-table info-table--inner info-table--date">
+                        <col class="info-table__col">
+                        <col class="info-table__col">
+                        <tbody class="info-table__tbody">
+                          <tr class="info-table__tr">
+                            <td class="info-table__td">
+                              <span>Создан:</span>
+                            </td>
+                            <td class="info-table__td">21.02.2019  13:13</td>
+                          </tr>
+                          <tr class="info-table__tr">
+                            <td class="info-table__td">
+                              <span>Опубликован:</span>
+                            </td>
+                            <td class="info-table__td">21.02.2019  14:07</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="section__block section__block--footer section__block--end section__block--grey">
+              <div class="control-btns control-btns--request">
+                <div class="control-btns__box">
+                  <div class="control-btns__box">
+                    <button class="control-btns__btn control-btns__btn--agree"></button>
+                  </div>
+                  <div class="control-btns__box">
+                    <button class="control-btns__btn control-btns__btn--download"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+<section class="section">
+	<section class="section__block section__block--header section__block--dark">
+		<h2 class="section-title section-title--light">
+			<div class="status-indicator status-indicator--green">
+				Шаблон запроса на издание сертификата <div class="break-text"><strong>№ 146</strong></div>  Версия 1.1
+			</div>
+		</h2>
+		<div class="status-text status-text--adm status-text--green">&#x41E;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x44B;&#x439;</div>
+	</section>
+	<div class="section__block section__block--body">
+		<table class="info-table">
+			<col class="info-table__col">
+			<col class="info-table__col">
+			<col class="info-table__col">
+			<thead class="info-table__thead">
+				<tr class="info-table__tr">
+					<th class="info-table__th">Отображаемое имя</th>
+					<th class="info-table__th">Зоны видимости</th>
+					<th class="info-table__th">Даты</th>
+				</tr>
+			</thead>
+			<tbody class="info-table__tbody">
+				<tr class="info-table__tr">
+					<td class="info-table__td" data-th="Отображаемое имя">&#x428;&#x430;&#x431;&#x43B;&#x43E;&#x43D; &#x434;&#x43B;&#x44F; &#x442;&#x435;&#x441;&#x442;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;</td>
+					<td class="info-table__td" data-th="Зоны видимости">
+						<ul class="expand-list" data-is-certificate="false" data-length="5">
+									<li>123123</li>
+									<li>afsdfasddf</li>
+									<li>&#x446;&#x446;&#x443;&#x43A;&#x444;&#x44B;&#x432;&#x444;&#x44B;&#x432;&#x444;&#x44B;&#x432;&#x444;&#x44B;&#x432;</li>
+									<li>345345</li>
+									<li>333</li>
+									<li>test</li>
+									<li>asdfasdfas</li>
+									<li>&#x444;&#x44B;&#x432;&#x430;&#x444;&#x44B;&#x432;&#x432;&#x430;1</li>
+									<li>&#x444;&#x44B;&#x432;&#x430;&#x444;&#x44B;&#x432;&#x430;&#x444;</li>
+									<li>&#x44B;&#x444;&#x432;&#x430;&#x44B;&#x432;&#x430;&#x444;&#x44B;&#x432;</li>
+									<li>&#x432;&#x430;&#x444;&#x44B;&#x432;&#x430;&#x44B;&#x432;&#x430;</li>
+									<li>2222222</li>
+									<li>223423422222222222</li>
+									<li>&#x422;&#x435;&#x441;&#x442;&#x43E;&#x432;&#x430;&#x44F; &#x437;&#x43E;&#x43D;&#x430;</li>
+									<li>4444</li>
+									<li>dfgsdfgsdfg</li>
+									<li>111-</li>
+									<li>xczxcvzxvzxcv</li>
+									<li>&#x444;&#x44B;&#x432;</li>
+									<li>zone1</li>
+									<li>234234</li>
+									<li>3333</li>
+									<li>222</li>
+									<li>1123</li>
+									<li>&#x422;&#x435;&#x441;&#x442;</li>
+									<li>567567&#x447;&#x430;&#x43F;&#x432;&#x430;&#x43F;&#x432;&#x430;&#x43F;</li>
+									<li>222444</li>
+									
+						</ul>
+					</td>
+					<td class="info-table__td" data-th="Даты">
+						<table class="info-table info-table--inner info-table--date">
+							<col class="info-table__col">
+							<col class="info-table__col">
+							<tbody class="info-table__tbody">
+								<tr class="info-table__tr">
+									<td class="info-table__td">
+										<span>Создан:</span>
+									</td>
+									<td class="info-table__td">08.10.2019 19:03</td>
+								</tr>
+										<tr class="info-table__tr">
+											<td class="info-table__td">
+													<span>Опубликован:</span>
+											</td>
+
+											<td class="info-table__td">08.10.2019 19:03</td>
+										</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="section__block section__block--footer section__block--end section__block--grey">
+		<div class="control-btns control-btns--request">
+				<div class="control-btns__box">
+				</div>
+		<div class="control-btns__box">
+					<button type="button" class="control-btns__btn control-btns__btn--seen" title="Отозвать шаблон" onclick="openModalWindow('/Templates/Cancel?templateId=146', null, 1)"></button>
+					<button type="button" class="control-btns__btn control-btns__btn--edit" title="Редактировать зоны видимости" onclick="openModalWindow('/Templates/Edit?templateId=146', null, 1)"></button>
+				<a class="control-btns__btn control-btns__btn--download" title="Экспортировать файл шаблона" href="/Templates/ExportFileTemplate?templateId=146"></a>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+          <!-- нижний контрол -->
+          <section class="result-control result-control--bottom">
+            <div class="pagination">
+              <div class="pagination__nav pagination__nav--prev"></div>
+              <div class="pagination__pages">
+                <a href="" class="pagination__page pagination__page--current">1</a>
+                <a href="" class="pagination__page">2</a>
+                <a href="" class="pagination__page">3</a>
+                <a href="" class="pagination__page">4</a>
+                <a href="" class="pagination__page">6</a>
+                <a href="" class="pagination__page">7</a>
+                <a href="" class="pagination__page">8</a>
+              </div>
+              <div class="pagination__nav pagination__nav--next"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer container">
+    <p class="copyright">©  2019 Компания «Информзащита»</p>
+  </footer>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../js/informdefend.js"></script>
+<script>
+informdefend();
+</script>
+</body>
+</html>

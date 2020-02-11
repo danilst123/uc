@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit:contain">
+
+  <title>Реестр сертификатов</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="../css/informdefend.css" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- ШАПКА -->
+    <header class="header">
+      <section class="header__panel"> 
+        <div class="container header__container header__container--panel">
+          <a href="/" class="logo">
+            <img src="../img/logo.png" alt="Информазащита">
+          </a>
+          <div class="hamburger hamburger--panel">
+            <div class="hamburger__item"></div>
+            <div class="hamburger__item"></div>
+            <div class="hamburger__item"></div>
+          </div>  
+        </div>
+      </section>
+      <section class="header__mobile-menu">
+        <div class="hamburger hamburger--mobile-menu">
+          <div class="hamburger__item"></div>
+          <div class="hamburger__item"></div>
+          <div class="hamburger__item"></div>
+        </div>  
+        <div class="container header__container header__container--mobile-menu">
+          <nav class="main-menu">
+            <a href="" class="main-menu__home"></a>
+            <ul class="main-menu__list">
+              <li class="main-menu__item"><a href="/">Реестр Запросов</a></li>
+              <li class="main-menu__item main-menu__item--active"><a href="/">Реестр Сертификатов </a></li>
+              <li class="main-menu__item"><a href="/">Реестр САС</a></li>
+              <li class="main-menu__item"><a href="/">Реестр шаблонов</a></li>
+            </ul> 
+          </nav>
+          <a href="/" class="administration-link">Администрирование</a>
+          <div class="user-block user-block--header">
+            <div class="user-block__name">Иванов Сергей Иванович</div>
+            <div class="user-block__title">Администратор</div>
+            <div class="round-toggler round-toggler--header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7"><g><g><path fill="#abafba" d="M0 1.82l5 5 5-5L8.828.648 5 4.476 1.172.648z"/></g></g></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- КОНТЕНТ -->
+    <main class="page">
+      <div class="container">
+
+        <!-- ЗАГОЛОВОК СТРАНИЦЫ -->
+        <h1 class="main-title">Реестр сертификатов</h1>
+
+        <!-- ПОИСК -->
+        <form class="search-form form">
+          <section class="search-form__search">
+            <section class="section">
+              <section class="section__block section__block--body section__block--square-padding section__block--light">
+                <div class="search-block">
+                  <div class="search-block__field">
+                    <input type="text" placeholder="Введите # запроса, Серийный номер сертификата, ID шаблона, имя владельца сертификата" class="search-block__input">
+                    <button class="search-block__reset"></button>
+                  </div>
+                  <button type="submit" class="search-block__btn btn"></button>
+                </div>
+                <div class="search-form__settings">
+
+                  <div class="radiobuttons-list radiobuttons-list--search">
+                    <label class="radiobuttons-list__item radiobutton">
+                      <input type="radio" name="foo" class="radiobutton__input" checked>
+                      <span class="radiobutton__radio"></span>
+                      <span class="radiobutton__text">Все условия («И»):</span>
+                    </label>
+                    <label class="radiobuttons-list__item radiobutton">
+                      <input type="radio" name="foo" class="radiobutton__input">
+                      <span class="radiobutton__radio"></span>
+                      <span class="radiobutton__text">Любое из условий («ИЛИ»):</span>
+                    </label>
+                  </div>
+
+                  <table class="form-table form-table--bordered-gap form-table--search">
+                    
+                    <col class="form-table__col">
+                    <col class="form-table__col">
+                    <col class="form-table__col">
+                    <col class="form-table__col">
+                    <col class="form-table__col">
+
+                    <thead class="form-table__thead">
+                      <tr class="form-table__tr">
+                        <th class="form-table__th">Параметр <small>(группа параметров)</small></th>
+                        <th class="form-table__th">Дополнительный параметр <small>(если требуется)</small></th>
+                        <th class="form-table__th">Оператор</th>
+                        <th class="form-table__th" colspan="2">Значение</th>
+                      </tr>
+                    </thead>
+                    <tbody class="form-table__tbody">
+                      <tr class="form-table__tr">
+                        <td class="form-table__td" data-th="Параметр (группа параметров)">
+                          <div class="select">
+                            <select data-placeholder="Выберите параметр или группу параметров">
+                              <option></option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Дополнительный параметр (если требуется)">
+                          <div class="select">
+                            <select data-placeholder="">
+                              <option></option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Оператор">
+                          <div class="select">
+                            <select data-placeholder="">
+                              <option></option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td class="form-table__td" data-th="Значение">
+                          <label class="datepicker-field">
+                            <input class="datepicker-field__input">
+                          </label>
+                        </td>
+                        <td class="form-table__td">
+                          <div class="delete-btn"></div>
+                        </td>
+                      </tr>
+                      <tr class="form-table__tr">
+                        <td class="form-table__td" colspan="5">
+                          <button class="add-row text-btn text-btn--blue">
+                            <img src="../img/plus.svg" class="text-btn__img">
+                            <span class="text-btn__text">Добавить параметр</span>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <section class="form__control">
+                    <button type="reset" class="reset-form text-btn text-btn--big">
+                      <img src="../img/delete.svg" alt="" class="text-btn__img">
+                      <span class="text-btn__text">Очистить</span>
+                    </button>
+                    <input type="submit" value="Найти" class="btn">
+                  </section>
+                </div>
+              </section>
+            </section>
+          </section>
+          <div class="search-form__expand round-toggler round-toggler--big">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7"><g><g><path fill="#abafba" d="M0 1.82l5 5 5-5L8.828.648 5 4.476 1.172.648z"/></g></g></svg>
+          </div>
+        </form>
+        
+        <!-- КНОПКИ -->
+        <div class="btns-row btns-row--bordered">
+          <button class="btn btn--blue-bordered">
+            <img src="../img/download.svg" alt="">
+            <span>Выгрузить в файловую систему</span>
+          </button>
+          <button class="btn btn--blue-bordered">
+            <div class="icon icon--ods"></div>
+            <span>Выгрузить в видеотчета</span>
+          </button>
+          <button class="btn btn--blue-bordered">
+            <img src="../img/download.svg" alt="">
+            <span>Выгрузить</span>
+          </button>
+        </div>
+
+        <!-- РЕЗУЛЬТАТЫ ПОИСКА -->
+        <div class="search-result">
+
+          <!-- верхний контрол -->
+          <section class="result-control result-control--top">
+            <p class="result-control__count">Всего найдено записей: 213</p>
+            <div class="sort">
+              <div class="sort__item">
+                <span class="sort__title">Сортировать по</span>
+                <label class="sort__direction">
+                  <input type="checkbox" name="" id="">
+                  <span></span> 
+                </label>
+                <div class="select select--grey select--sort">
+                  <select>
+                    <option value="1">дате создания</option>
+                    <option value="2">дате создания 2</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- список запросов -->     
+          <section class="section">
+            <div class="section__block section__block--header section__block--dark">
+              <h2 class="section-title section-title--light">
+                <div class="status-indicator status-indicator--green">
+                  Сертификат <strong class="break-text">№ 342324343623434232435465768711</strong>
+                </div>
+              </h2>
+              <div class="status-text status-text--request status-text--green">Действует</div>
+            </div>
+            <div class="section__block section__block--body">
+              <table class="info-table">
+
+                <col class="info-table__col">
+                <col class="info-table__col">
+                <col class="info-table__col">
+                
+                <thead class="info-table__thead">
+                  <tr class="info-table__tr">
+                    <th class="info-table__th">Заявитель</th>
+                    <th class="info-table__th">Действие сертификата</th>
+                    <th class="info-table__th">Расширение сферы применения ключа</th>
+                  </tr>
+                </thead>
+                <tbody class="info-table__tbody">
+                  <tr class="info-table__tr">
+                    <td class="info-table__td info-table__td--vat" data-th="Заявитель">
+                      <p><span>CN /</span> &lt;Общее имя&gt</p>
+                      <p><span>S /</span> &lt;Фамилия&gt</p>
+                      <p><span>C /</span> RU</p>
+                      <p><span>L /</span> Нижний Волочек</p>
+                      <p><span>SNILS /</span> 12345678909</p>
+                      <p><span>INN /</span> 000123456789</p>
+                    </td>
+                    <td class="info-table__td info-table__td--vat" data-th="Действие сертификата">
+                      <p>21.12.2016 — 19.12.2021</p>
+                    </td>
+                    <td class="info-table__td info-table__td--vat" data-th="Расширение сферы применения ключа">
+                      <p>&lt;Значение сферы применения ключа&gt; (&lt;OID&gt;)</p>
+                      <p>&lt;Значение сферы применения ключа&gt; (&lt;OID&gt;)</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="section__block section__block--footer section__block--toped section__block--grey">
+              <div class="block-links block-links--request">
+                <a href="">
+                  <img src="../img/certificate.svg" alt="">
+                  <p>Сведения о сертификате</p>
+                </a>
+                <a href="">
+                  <img src="../img/book.svg" alt="">
+                  <p>
+                    Сведения о шаблоне
+                    <span>Сертификат ФЛ</span>
+                  </p>
+                </a>
+                <a href="">
+                  <img src="../img/user.svg" alt="">
+                  <p>
+                    Сведения о работнике УЦ, утвердившим издание сертификата
+                    <span>Королев Алексей Александрович</span>
+                  </p>
+                </a>
+                <a href="">
+                  <img src="../img/doc.svg" alt="">
+                  <p>Сведения о запросе</p>
+                </a>
+              </div>
+              <div class="control-btns control-btns--request">
+                <button class="control-btns__btn control-btns__btn--download"></button>
+              </div>
+            </div>
+          </section>
+          <section class="section">
+            <div class="section__block section__block--header section__block--dark">
+              <h2 class="section-title section-title--light">
+                <div class="status-indicator status-indicator--green">
+                  Сертификат <strong class="break-text">№ 342324343623434232435465768711</strong>
+                </div>
+              </h2>
+              <div class="status-text status-text--request status-text--green">Действует</div>
+            </div>
+            <div class="section__block section__block--body">
+              <table class="info-table">
+
+                <col class="info-table__col">
+                <col class="info-table__col">
+                <col class="info-table__col">
+                
+                <thead class="info-table__thead">
+                  <tr class="info-table__tr">
+                    <th class="info-table__th">Заявитель</th>
+                    <th class="info-table__th">Действие сертификата</th>
+                    <th class="info-table__th">Расширение сферы применения ключа</th>
+                  </tr>
+                </thead>
+                <tbody class="info-table__tbody">
+                  <tr class="info-table__tr">
+                    <td class="info-table__td info-table__td--vat" data-th="Заявитель">
+                      <p><span>CN /</span> &lt;Общее имя&gt</p>
+                      <p><span>S /</span> &lt;Фамилия&gt</p>
+                      <p><span>C /</span> RU</p>
+                      <p><span>L /</span> Нижний Волочек</p>
+                      <p><span>SNILS /</span> 12345678909</p>
+                      <p><span>INN /</span> 000123456789</p>
+                    </td>
+                    <td class="info-table__td info-table__td--vat" data-th="Действие сертификата">
+                      <p>21.12.2016 — 19.12.2021</p>
+                    </td>
+                    <td class="info-table__td info-table__td--vat" data-th="Расширение сферы применения ключа">
+                      <p>&lt;Значение сферы применения ключа&gt; (&lt;OID&gt;)</p>
+                      <p>&lt;Значение сферы применения ключа&gt; (&lt;OID&gt;)</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="section__block section__block--footer section__block--toped section__block--grey">
+              <div class="block-links block-links--request">
+                <a href="">
+                  <img src="../img/certificate.svg" alt="">
+                  <p>Сведения о сертификате</p>
+                </a>
+                <a href="">
+                  <img src="../img/book.svg" alt="">
+                  <p>Сведения о шаблоне</p>
+                </a>
+                <a href="">
+                  <img src="../img/user.svg" alt="">
+                  <p>Сведения о работнике УЦ, утвердившим издание сертификата</p>
+                </a>
+                <a href="">
+                  <img src="../img/doc.svg" alt="">
+                  <p>Сведения о запросе</p>
+                </a>
+              </div>
+              <div class="control-btns control-btns--request">
+                <button class="control-btns__btn control-btns__btn--download"></button>
+              </div>
+            </div>
+          </section>
+          <section class="section">
+            <div class="section__block section__block--header section__block--dark">
+              <h2 class="section-title section-title--light">
+                <div class="status-indicator status-indicator--red">
+                  Сертификат <strong class="break-text">№ 342324343623434232435465768711</strong>
+                </div>
+              </h2>
+              <div class="status-text status-text--request status-text--red">Аннулирован</div>
+            </div>
+            <div class="section__block section__block--body">
+              <table class="info-table">
+
+                <col class="info-table__col">
+                <col class="info-table__col">
+                <col class="info-table__col">
+                
+                <thead class="info-table__thead">
+                  <tr class="info-table__tr">
+                    <th class="info-table__th">Заявитель</th>
+                    <th class="info-table__th">Действие сертификата</th>
+                    <th class="info-table__th">Расширение сферы применения ключа</th>
+                  </tr>
+                </thead>
+                <tbody class="info-table__tbody">
+                  <tr class="info-table__tr">
+                    <td class="info-table__td info-table__td--vat" data-th="Заявитель">
+                      <p><span>CN /</span> &lt;Общее имя&gt</p>
+                      <p><span>S /</span> &lt;Фамилия&gt</p>
+                      <p><span>C /</span> RU</p>
+                      <p><span>L /</span> Нижний Волочек</p>
+                      <p><span>SNILS /</span> 12345678909</p>
+                      <p><span>INN /</span> 000123456789</p>
+                    </td>
+                    <td class="info-table__td info-table__td--vat" data-th="Действие сертификата">
+                      <p>21.12.2016 — 19.12.2021</p>
+                    </td>
+                    <td class="info-table__td info-table__td--vat" data-th="Расширение сферы применения ключа">
+                      <p>&lt;Значение сферы применения ключа&gt; (&lt;OID&gt;)</p>
+                      <p>&lt;Значение сферы применения ключа&gt; (&lt;OID&gt;)</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="section__block section__block--footer section__block--toped section__block--grey">
+              <div class="block-links block-links--request">
+                <a href="">
+                  <img src="../img/certificate.svg" alt="">
+                  <p>Сведения о сертификате</p>
+                </a>
+                <a href="">
+                  <img src="../img/book.svg" alt="">
+                  <p>Сведения о шаблоне</p>
+                </a>
+                <a href="">
+                  <img src="../img/user.svg" alt="">
+                  <p>Сведения о работнике УЦ, утвердившим издание сертификата</p>
+                </a>
+                <a href="">
+                  <img src="../img/doc.svg" alt="">
+                  <p>Сведения о запросе</p>
+                </a>
+                <a href="">
+                  <img src="../img/user.svg" alt="">
+                  <p>Сведения о работнике УЦ, выполнившем аннулирование сертификата</p>
+                </a>
+              </div>
+              <div class="control-btns control-btns--request">
+                <button class="control-btns__btn control-btns__btn--download"></button>
+              </div>
+            </div>
+          </section>
+
+          <!-- нижний контрол -->
+          <section class="result-control result-control--bottom">
+            <div class="pagination">
+              <div class="pagination__nav pagination__nav--prev"></div>
+              <div class="pagination__pages">
+                <a href="" class="pagination__page pagination__page--current">1</a>
+                <a href="" class="pagination__page">2</a>
+                <a href="" class="pagination__page">3</a>
+                <a href="" class="pagination__page">4</a>
+                <a href="" class="pagination__page">6</a>
+                <a href="" class="pagination__page">7</a>
+                <a href="" class="pagination__page">8</a>
+              </div>
+              <div class="pagination__nav pagination__nav--next"></div>
+            </div>
+          </section>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer container">
+    <p class="copyright">©  2019 Компания «Информзащита»</p>
+  </footer>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../js/informdefend.js"></script>
+<script>
+informdefend();
+</script>
+</body>
+</html>

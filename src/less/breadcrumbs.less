@@ -1,0 +1,37 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  white-space: nowrap;
+  margin-bottom: 35px;
+
+  @media screen and @md-max {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    color: #abafba;
+    font-family: @main_font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-decoration: none;
+
+    &:hover {
+      color: #abafba;
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+
+      &:after {
+        content: '/';
+        margin-left: 10px;
+      }
+    }
+  }
+
+  a:hover span {
+    text-decoration: underline;
+  }
+}

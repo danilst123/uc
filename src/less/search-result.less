@@ -1,0 +1,35 @@
+.search-result {
+	margin-top: 10px;
+
+  &--offseted {
+    margin-top: 40px;
+  }
+
+  &__no-results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+
+    @media screen and @xs-max {
+      flex-direction: column;
+      text-align: center;
+      margin-top: 35px;
+    }
+
+    p {
+      color: #6a6c74;
+      font-family: @main_font;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      margin: 0 0 0 27px;
+
+      @media screen and @xs-max {
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 20px 0 0 0;
+      }
+    }
+  }
+}

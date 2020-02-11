@@ -1,0 +1,125 @@
+.select {	
+	cursor: pointer;
+
+	select {
+		display: inline-block;
+	}
+
+	option {
+		padding: 0 12px;
+		font-size: inherit;
+		line-height: inherit;
+		color: inherit;
+	}
+
+	&__control {
+		max-width: 100%; //ie fix
+		display: flex;
+		align-items: center;
+		margin-top: 5px;
+
+		& > *:not(:last-child) {
+			margin-right: 15px;
+		}
+	}
+
+	&__reset {
+		visibility: hidden;
+	}
+
+	// select2 plugin
+	&--grey .select2-container--default {
+		.select2-selection--single {
+			.select2-selection__rendered {
+				height: 34px;
+				background-color: #efefef;
+				border-color: #efefef;
+				padding: 0 30px 0 10px;
+			}
+
+			.select2-selection__arrow {
+			  height: 34px;
+			  width: 30px;
+			  background-size: 14px auto;
+			}
+		}
+	}
+
+	&--disabled .select2-container--default {
+		.select2-selection--single,
+		.select2-selection--multiple {
+			background-color: #efefef !important;
+
+			.select2-selection__rendered {
+				background-color: #efefef !important;
+			}
+			.select2-selection__arrow {
+			  opacity: 0.4 !important;
+			}
+		}
+		.select2-selection--multiple:after {
+			opacity: 0.4 !important;
+		}
+	}
+
+	&--sort .select2-container--default {
+		.select2-selection--single {
+			.select2-selection__rendered {
+				padding: 0 30px 0 0;
+			}
+		}
+	}
+
+	&--freezed .select2-container--default {
+		.select2-selection--single,
+		.select2-selection--multiple {
+			background: none !important;
+			border: none !important;
+			padding: 0 !important;
+
+			.select2-selection__rendered {
+				background: none !important;
+				margin: -1.5px;
+
+				li:not(.select2-search--inline) {
+					height: 34px;
+					color: #50535b;
+					border: 1px solid #e6e6e6;
+					background-color: #efefef;
+					margin: 1.5px;
+					padding: 7px 12px;
+				}
+			}
+			.select2-selection__arrow {
+			  display: none !important;
+			}
+		}
+		.select2-selection--multiple:after {
+			display: none !important;
+		}
+	}
+
+	&--error {
+		.select2-selection--multiple {
+			border-color: #d05b5b !important;
+		}
+		.select2-container--default,
+		.select2-selection--single {
+			.select2-selection__rendered {
+				border-color: #d05b5b !important;
+			}
+		}
+	}
+	select.input-validation-error {
+		& + .select2-selection--multiple {
+			border-color: #d05b5b !important;
+		}
+		
+		& + .select2-container--default,
+		& + .select2-selection--single {
+			.select2-selection__rendered {
+				border-color: #d05b5b !important;
+			}
+		}
+	}
+}

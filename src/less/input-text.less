@@ -1,0 +1,46 @@
+.input-text {
+	.form-field;
+	transition: border-color 0.3s;
+
+	&--medium {
+		max-width: 300px;
+
+		@media screen and @xs-max {
+		  max-width: 100%;
+		}
+	}
+
+	&--lowermedium {
+		max-width: 274px;
+
+		@media screen and @xs-max {
+		  max-width: 100%;
+		}
+	}
+
+	&--small {
+		max-width: 110px;
+	}
+
+	&--disabled {
+		border-color: #e6e6e6;
+		background-color: #efefef;
+		cursor: default;
+	}
+
+	&--error {
+		border-color: #d05b5b;
+	}
+
+	&--colon {
+		color: #abafba;
+		background-image: url(../img/ellipsis.svg);
+		background-repeat: no-repeat;
+		background-position: right 6px center;
+		padding-right: 30px;
+
+		&-active {
+			color: #50535b;
+		}
+	}
+}

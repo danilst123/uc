@@ -1,0 +1,147 @@
+.section-title {
+  max-width: 100%; //ie fix
+  color: #50535b;
+  font-family: @main_font;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+
+  @media screen and @xs-max {
+    font-size: 12px;
+  }
+
+  &--white {
+    color: #ffffff;
+  }
+
+  &--light {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: none;
+
+    @media screen and @xxs-max {
+      font-size: 14px;
+    }
+  }
+
+  &--dropdown {
+    position: relative;
+    padding-left: 28px;
+
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-image: url(../img/arrow-down-drop-circle.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: all 0.4s;
+      backface-visibility: visible;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &--dropdown&--chevron-dropdown {
+    &:before {
+      background-image: url(../img/chevron-down-white.svg);
+    }
+  }
+
+  &--dropdown&--expanded {
+    &:before {
+      transform: rotateX(180deg) translateY(50%);
+    }
+  }
+
+  &--dropdown&--white,
+  &--dropdown&--light {
+    &:before {
+      background-image: url(../img/arrow-down-drop-circle-white.svg);
+    }
+  }
+  &--dropdown&--chevron-dropdown&--white,
+  &--dropdown&--chevron-dropdown&--light {
+    &:before {
+      background-image: url(../img/chevron-down-white.svg);
+    }
+  }
+
+  &--disabled {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  &--subtitle {
+    color: #50535b;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    @media screen and @xs-max {
+      font-size: 11px;
+    }
+
+    span {
+      color: inherit !important;
+    }
+  }
+
+  &--caption {
+    color: #abafba;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  p {
+    display: inline;
+
+    @media screen and @sm-max {
+      display: block;
+    }
+
+    & + p {
+      margin: 0 0 0 15px;
+
+      @media screen and @sm-max {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  b {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  span {
+    color: #abafba;
+  }
+
+  &__descr {
+    color: #a7a7a7;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-top: 1px;
+
+    span {
+      color: #828282;
+    }
+  }
+
+}

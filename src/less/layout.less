@@ -1,0 +1,67 @@
+html, body {
+  min-width: 320px;
+  width: 100%;
+}
+
+body {
+  font-family: @main_font;
+  display: flex;
+  flex-direction: column;
+  color: #50535b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+
+  &--enter-page {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.page {
+  @media screen and @lg-min {
+    padding: 50px 0;        
+  }
+  @media screen and @md-min and @md-max {
+    padding: 35px 0;
+  }
+  @media screen and @sm-min and @sm-max {
+    padding: 25px 0;
+  }
+  @media screen and @xs-max {
+    padding: 90px 0 40px;
+  }
+
+  &--enter-page {
+    padding: 0 !important;
+    height: 100%;
+    max-width: 100%;
+  }
+
+  &--withBreadcrumbs {
+    @media screen and @sm-min {
+      padding-top: 15px;
+    }
+  }
+
+}
+
+.container {
+  width: 100%;
+  min-width: 320px;
+  max-width: @container-max-width;
+  margin: 0 auto;    
+  padding: 0 20px;
+
+  &:before, &:after {
+    display: none;
+  }
+  
+  @media screen and @xs-max {
+    padding: 0 15px;
+  }
+}

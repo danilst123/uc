@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit:contain">
+
+  <title>reestr-win-1</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="../css/informdefend.css" rel="stylesheet">
+</head>
+<body>
+  
+  <!-- МОДАЛЬНОЕ ОКНО -->
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__box">
+      <div class="modal__head">
+        <div class="modal__title">Регистрация запроса на издание сертификата</div>
+        <div class="modal__close" title="Закрыть"></div>
+      </div>
+      <div class="modal__body">
+        <form class="form">
+          <section class="section">
+            <div class="section__block section__block--header section__block--bottomed section__block--dark">
+              <div class="radiotitles radiotitles--no-padding">
+                <label class="radiotitles__item">
+                  <input class="radiotitles__radio" type="radio" value="1" name="radiotitle" checked>
+                  <span class="radiotitles__title">Сформировать запрос на издание сертификата</span>
+                </label>
+                <label class="radiotitles__item">
+                  <input class="radiotitles__radio" type="radio" value="2" name="radiotitle">
+                  <span class="radiotitles__title">Импортировать запрос на издание сертификата</span>
+                </label>
+              </div>
+            </div>
+          </section>
+          <section class="section">
+            <div class="section__block section__block--header section__block--grey">
+              <h2 class="section-title">Сведения о шаблоне</h2>
+            </div>
+            <div class="section__block section__block--body section__block--light">
+              <table class="form-table form-table--rrpc-ccrpc-it">
+
+                <col class="form-table__col">
+                <col class="form-table__col">
+                <col class="form-table__col">
+                <col class="form-table__col">
+
+                <tbody class="form-table__tbody">
+                  <tr class="form-table__tr">
+                    <td class="form-table__td">
+                      <div class="cell-title">
+                        <span class="text-required">Зоны видимости</span>
+                      </div>
+                    </td>
+                    <td class="form-table__td" colspan="3">
+                      <div class="select select--multiple">
+                        <select name="states[]" multiple="multiple" data-placeholder="Выберите одну или несколько зон видимостей">
+                          <option value="msc">Москва</option>
+                          <option value="tv">Тверь</option>
+                          <option value="or">Орел</option>
+                          <option value="stv">Ставрополь</option>
+                          <option value="kz">Казань</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="form-table__tr">
+                    <td class="form-table__td">
+                      <div class="cell-title">
+                        <span class="text-required">Шаблон</span>
+                      </div>
+                    </td>
+                    <td class="form-table__td" colspan="3">
+                      <div class="select">
+                        <select data-placeholder="Выберите шаблон запроса на сертификат">
+                          <option></option>
+                          <option>1</option>
+                          <option>2</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="form-table__tr">
+                    <td class="form-table__td">
+                      <div class="cell-title">Номер шаблона</div>
+                    </td>
+                    <td class="form-table__td">
+                      <input type="text" class="input-text input-text--lowermedium" disabled placeholder="—">
+                    </td>
+                    <td class="form-table__td">
+                      <div class="cell-title">Версия шаблона</div>
+                    </td>
+                    <td class="form-table__td">
+                      <input type="text" class="input-text input-text--lowermedium" disabled placeholder="—">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="form__control">
+            <button type="reset" class="reset-form text-btn text-btn--big">
+              <img src="../img/delete.svg" alt="" class="text-btn__img">
+              <span class="text-btn__text">Отмена</span>
+            </button>
+            <input type="submit" value="Создать" class="btn" disabled>
+          </section>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../js/informdefend.js"></script>
+<script>
+informdefend();
+</script>
+</body>
+</html>

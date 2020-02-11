@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit:contain">
+
+  <title>Администрирование</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="../css/informdefend.css" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- ШАПКА -->
+    <header class="header">
+      <section class="header__panel"> 
+        <div class="container header__container header__container--panel">
+          <a href="/" class="logo">
+            <img src="../img/logo.png" alt="Информазащита">
+          </a>
+          <div class="hamburger hamburger--panel">
+            <div class="hamburger__item"></div>
+            <div class="hamburger__item"></div>
+            <div class="hamburger__item"></div>
+          </div>  
+        </div>
+      </section>
+      <section class="header__mobile-menu">
+        <div class="hamburger hamburger--mobile-menu">
+          <div class="hamburger__item"></div>
+          <div class="hamburger__item"></div>
+          <div class="hamburger__item"></div>
+        </div>  
+        <div class="container header__container header__container--mobile-menu">
+          <nav class="main-menu">
+            <a href="" class="main-menu__home"></a>
+            <ul class="main-menu__list">
+              <li class="main-menu__item"><a class="main-menu__link" href="/">Реестр Запросов</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="/">Реестр Сертификатов </a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="/">Реестр САС</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="/">Реестр шаблонов</a></li>
+              <li class="main-menu__item main-menu__item--active main-menu__item--adm main-menu__item--with-submenu">
+                <a class="main-menu__link" href="/" >Администрирование</a>
+                <div class="main-menu__submenu-toggler"></div>
+                <ul class="submenu">
+                  <li class="submenu__item"><a href="">Управление пользователями</a></li>
+                  <li class="submenu__item"><a href="">Зоны видимости</a></li>
+                </ul>
+              </li>
+            </ul> 
+          </nav>
+          <div class="user-block user-block--header">
+            <div class="user-block__name">Иванов Сергей Иванович</div>
+            <div class="user-block__title">Администратор</div>
+            <div class="user-block__logout">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><g><g><path fill="#acb0bb" d="M12.516 14.016L17.484 9l-4.968-5.016-1.454 1.407 2.625 2.625H3.984v1.968h9.703l-2.625 2.625zM2.016 0C1.422 0 .937.187.562.563.187.938 0 1.422 0 2.016v13.968c0 .563.187 1.04.562 1.43.375.391.86.586 1.454.586h13.968c.563 0 1.039-.195 1.43-.586.39-.39.586-.867.586-1.43v-4.64l-2.016 1.968v2.672H2.016V2.016h13.968v2.672L18 6.656v-4.64c0-.563-.196-1.039-.586-1.43A1.947 1.947 0 0 0 15.984 0z"/></g></g></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- КОНТЕНТ -->
+    <main class="page page--withBreadcrumbs">
+      <div class="container">
+
+        <!-- Хлебные крошки -->
+        <div class="breadcrumbs">
+          <a href="/" class="breadcrumbs__item"><span>Администрирование</span></a>
+          <div href="" class="breadcrumbs__item"><span>Управление пользователям</span></div>
+        </div>
+
+        <!-- ЗАГОЛОВОК СТРАНИЦЫ -->
+        <h1 class="main-title">Управление пользователями</h1>
+        
+        <!-- ПОИСК -->
+        <form class="search-form form">
+          <section class="search-form__search section">
+            <div class="section__block section__block--body section__block--square-padding section__block--light">
+              <div class="search-block">
+                <input type="search" placeholder="Укажите серийный номер сертификата, СНИЛС, фамилию, имя пользователя" class="search-block__input">
+              </div>
+              <div class="checkbox-list checkbox-list--adm">
+                <label class="checkbox checkbox-list__item">
+                  <input type="checkbox" class="checkbox__input">
+                  <span class="checkbox__icon"></span>
+                  <span class="checkbox__title">Отображать только действующие сертификаты</span>
+                </label>
+              </div>
+              <div class="search-form__settings search-form__settings--bordered search-form__settings--offseted">
+                <table class="form-table form-table--adm-search">
+
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+                  <col class="form-table__col">
+
+                  <tbody class="form-table__tbody">
+                    <tr class="form-table__tr">
+                      <td class="form-table__td"><div class="cell-title">Номер запроса</div></td>
+                      <td class="form-table__td" colspan="3">
+                        <input type="text" class="input-text" placeholder="Введите номер запроса">
+                      </td>
+                      <td class="form-table__td"><div class="cell-title">Серийный номер сертификата</div></td>
+                      <td class="form-table__td">
+                        <input type="text" class="input-text" placeholder="Введите серийный номер">
+                      </td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td"><div class="cell-title">ФИО</div></td>
+                      <td class="form-table__td">
+                        <input type="text" class="input-text" placeholder="Введите фамилию ">
+                      </td>
+                      <td class="form-table__td">
+                        <input type="text" class="input-text" placeholder="Введите имя">
+                      </td>
+                      <td class="form-table__td">
+                        <input type="text" class="input-text" placeholder="Введите отчество">
+                      </td>
+                      <td class="form-table__td"><div class="cell-title">СНИЛС</div></td>
+                      <td class="form-table__td">
+                        <input type="text" class="input-text" placeholder="Введите СНИЛС">
+                      </td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td"><div class="cell-title">Полномочия</div></td>
+                      <td class="form-table__td" colspan="5">
+                        <div class="select">
+                          <select data-placeholder="Выберите полномочия">
+                            <option></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="form-table__tr">
+                      <td class="form-table__td"><div class="cell-title">Зоны видимости</div></td>
+                      <td class="form-table__td" colspan="5">
+                        <div class="select">
+                          <select data-placeholder="Выберите зону (зоны) видимости">
+                            <option></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="form__control">
+                <button type="reset" class="reset-form text-btn text-btn--big">
+                  <img src="../img/delete.svg" alt="" class="text-btn__img">
+                  <span class="text-btn__text">Очистить</span>
+                </button>
+                <input type="submit" value="Найти" class="btn">
+              </div>
+            </div>
+          </section>
+          <div class="search-form__expand round-toggler round-toggler--big">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7"><g><g><path fill="#abafba" d="M0 1.82l5 5 5-5L8.828.648 5 4.476 1.172.648z"/></g></g></svg>
+          </div>
+        </form>
+
+        <div class="grid grid--aic grid--adm">
+          <div class="grid__col">
+            <div class="attention-block attention-block--importantGrey">Раздел содержит перечень сертификатов и запросов на издание сертификата, которые используются <br> (либо могут использоваться) для работы в системе. Группировка записей выполняется по СНИЛС. Для любого из <br> сертификатов, указанных в списке, может быть назначено одно из следующих полномочий: Администратор зоны <br> видимости, Оператор, Аудитор. Пользователи с назначенными полномочиями смогут работать в интерфейсах <br> Системы. Для прекращения работы пользователя в Системе необходимо удалить полномочие у пользователя.</div>
+          </div>
+          <div class="grid__col">
+            <div class="btns-row">
+              <button class="btn btn--blue-bordered">
+                <img src="../img/blue-plus.svg" alt="">
+                <span>Создать пользователя (выбрать сертификат)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+                
+        <!-- РЕЗУЛЬТАТЫ ПОИСКА -->
+        <div class="search-result">
+
+          <!-- верхний контрол -->
+          <section class="result-control result-control--top">
+            <div class="result-control__col result-control__col--aside">
+              <p class="result-control__count">Всего найдено записей: 213</p>
+            </div>
+            <div class="result-control__col result-control__col--main">
+              <div class="result-control__sliding-control">
+                <button class="result-control__sliding-btn result-control__sliding-btn--slideUp">
+                  <img src="../img/arrow-down-drop-circle-blue.svg" alt="">
+                  <span>Свернуть все</span>
+                </button>
+                <button class="result-control__sliding-btn result-control__sliding-btn--slideDown">
+                  <img src="../img/arrow-down-drop-circle-blue.svg" alt="">
+                  <span>Развернуть все</span>
+                </button>
+              </div>
+              <div class="sort">
+                <div class="sort__item">
+                  <span class="sort__title">Сортировать по</span>
+                  <label class="sort__direction">
+                    <input type="checkbox" name="" id="">
+                    <span></span> 
+                  </label>
+                  <div class="select select--grey select--sort">
+                    <select>
+                      <option value="1">дате создания</option>
+                      <option value="2">дате создания 2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- колонки -->
+          <div class="grid">
+            <aside class="grid__aside">
+              <section class="section">
+                <section class="section">
+                  <div class="section__block section__block--header section__block--dark">
+                    <h2 class="section-title section-title--light">Зоны видимости</h2>
+                  </div>
+                  <div class="section__block section__block--light">
+                    <div class="checkbox-list checkbox-list--aside checkbox-list--scollable">
+                      <label class="checkbox-list__item checkbox-list__item--all checkbox checkbox--box">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__title"><strong>Все зоны видимости</strong></span>
+                        <span class="checkbox__bg"></span>
+                      </label>
+                      <label class="checkbox-list__item checkbox checkbox--box">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__title">
+                          <strong>01</strong> Адыгея
+                        </span>
+                        <span class="checkbox__bg"></span>
+                      </label>
+                      <label class="checkbox-list__item checkbox checkbox--box">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__title">
+                          <strong>02</strong> Башкортостан
+                        </span>
+                        <span class="checkbox__bg"></span>
+                      </label>
+                      <label class="checkbox-list__item checkbox checkbox--box">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__title">
+                          <strong>03</strong> Бурятия
+                        </span>
+                        <span class="checkbox__bg"></span>
+                      </label>
+                      <label class="checkbox-list__item checkbox checkbox--box">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__title">
+                          <strong>04</strong> Алтай
+                        </span>
+                        <span class="checkbox__bg"></span>
+                      </label>
+                      <label class="checkbox-list__item checkbox checkbox--box">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__title">
+                          <strong>05</strong> Крым
+                        </span>
+                        <span class="checkbox__bg"></span>
+                      </label>
+                      <label class="checkbox-list__item checkbox checkbox--box">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__title">
+                          <strong>05</strong> Крым
+                        </span>
+                        <span class="checkbox__bg"></span>
+                      </label>
+                      <label class="checkbox-list__item checkbox checkbox--box">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__title">
+                          <strong>05</strong> Крым
+                        </span>
+                        <span class="checkbox__bg"></span>
+                      </label>
+                      <label class="checkbox-list__item checkbox checkbox--box">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__title">
+                          <strong>05</strong> Крым
+                        </span>
+                        <span class="checkbox__bg"></span>
+                      </label>
+                      <label class="checkbox-list__item checkbox checkbox--box">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__title">
+                          <strong>05</strong> Крым
+                        </span>
+                        <span class="checkbox__bg"></span>
+                      </label>
+                      <label class="checkbox-list__item checkbox checkbox--box">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon"></span>
+                        <span class="checkbox__title">
+                          <strong>05</strong> Крым
+                        </span>
+                        <span class="checkbox__bg"></span>
+                      </label>
+                    </div>
+                  </div>
+                </section>
+              </section>
+            </aside>
+            <div class="grid__main">
+
+              <!-- список запросов -->              
+              <section class="section">
+                <div class="section__block section__block--header section__block--toggler section__block--dark">
+                  <h2 class="section-title section-title--light section-title--dropdown">
+                    <p><b>Григорьев Г.Г.</b></p> 
+                    <p>СНИЛС <i class="break-text">028-789-355 08</i></p>
+                  </h2>
+                </div>
+                <div class="section__block section__block--body section__block--no-padding section__block--no-toggle">
+                  <div class="section__subsection">
+                    <div class="status-box">
+                      <div class="status-box__item">
+                        <div class="status-text status-text--green">Активный</div>
+                        Администратор до 20.04.2020
+                      </div>
+                      <div class="status-box__item">
+                        <div class="status-text status-text--orange">Внимание</div>
+                        Оператор регистрации до 20.12.2019
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section__subsection section__subsection--togglable" style="display: none;">
+                    <table class="info-table info-table--adm info-table--bordered">
+
+                      <col class="info-table__col">
+                      <col class="info-table__col">
+                      <col class="info-table__col">
+                      <col class="info-table__col">
+                      <col class="info-table__col">
+
+                      <tbody class="info-table__tbody">
+                        <tr class="info-table__tr">
+                          <td class="info-table__td">
+                            <a href="">Сертификат № <div class="break-text">0000000000000000000000000000000000000000</div></a>
+                            <i class="icon icon--label"></i>
+                          </td>
+                          <td class="info-table__td">Иванов Иван Иванович</td>
+                          <td class="info-table__td">до 20.04.2020</td>
+                          <td class="info-table__td"><span>Администратор</span></td>
+                          <td class="info-table__td">
+                            <div class="control-btns">
+                              <button class="control-btns__btn control-btns__btn--edit-blue"></button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="info-table__tr">
+                          <td class="info-table__td">
+                            <a href="">Сертификат № <div class="break-text">0000000000000000000000000000000000000000</div></a>
+                          </td>
+                          <td class="info-table__td">Иванов Иван Иванович</td>
+                          <td class="info-table__td">до 20.12.2019</td>
+                          <td class="info-table__td"><span>Оператор регистрации</span></td>
+                          <td class="info-table__td">
+                            <div class="control-btns">
+                              <button class="control-btns__btn control-btns__btn--edit-blue"></button>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </section>
+
+              <section class="section">
+                <div class="section__block section__block--header section__block--toggler section__block--dark">
+                  <h2 class="section-title section-title--light section-title--expanded section-title--dropdown">
+                    <p><b>Андреев А.А.</b></p> 
+                    <p>СНИЛС <i class="break-text">137-495-345 07</i></p>
+                  </h2>
+                </div>
+                <div class="section__block section__block--body section__block--no-padding section__block--no-toggle">
+                  <div class="section__subsection">
+                    <div class="status-box">
+                      <div class="status-box__item">
+                        <div class="status-text status-text--green">Активный</div>
+                        Администратор до 20.04.2020
+                      </div>
+                      <div class="status-box__item">
+                        <div class="status-text status-text--orange">Внимание</div>
+                        Оператор регистрации до 20.12.2019
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section__subsection section__subsection--togglable">
+                    <table class="info-table info-table--adm info-table--bordered">
+
+                      <col class="info-table__col">
+                      <col class="info-table__col">
+                      <col class="info-table__col">
+                      <col class="info-table__col">
+                      <col class="info-table__col">
+
+                      <tbody class="info-table__tbody">
+                        <tr class="info-table__tr">
+                          <td class="info-table__td">
+                            <a href="">Сертификат № <div class="break-text">0000000000000000000000000000000000000000</div></a>
+                            <i class="icon icon--label"></i>
+                          </td>
+                          <td class="info-table__td">Иванов Иван Иванович</td>
+                          <td class="info-table__td">до 20.04.2020</td>
+                          <td class="info-table__td"><span>Администратор</span></td>
+                          <td class="info-table__td">
+                            <div class="control-btns">
+                              <button class="control-btns__btn control-btns__btn--edit-blue"></button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="info-table__tr">
+                          <td class="info-table__td">
+                            <a href="">Сертификат № <div class="break-text">0000000000000000000000000000000000000000</div></a>
+                          </td>
+                          <td class="info-table__td">Иванов Иван Иванович</td>
+                          <td class="info-table__td">до 20.12.2019</td>
+                          <td class="info-table__td"><span>Оператор регистрации</span></td>
+                          <td class="info-table__td">
+                            <div class="control-btns">
+                              <button class="control-btns__btn control-btns__btn--edit-blue"></button>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </section>
+
+              <section class="section">
+                <div class="section__block section__block--header section__block--toggler section__block--dark">
+                  <h2 class="section-title section-title--light section-title--expanded section-title--dropdown">
+                    <p><b>Иванов И.И.</b></p> 
+                    <p>СНИЛС <i class="break-text">030-077-158 05</i></p>
+                  </h2>
+                </div>
+                <div class="section__block section__block--body section__block--no-padding section__block--no-toggle">
+                  <div class="section__subsection">
+                    <div class="status-box">
+                      <div class="status-box__item status-box__item--nonActive">
+                        <div class="status-text status-text--grey">Неактивный</div>
+                        Администратор истек 01.12.2019
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section__subsection section__subsection--togglable">
+                    <table class="info-table info-table--adm info-table--bordered">
+
+                      <col class="info-table__col">
+                      <col class="info-table__col">
+                      <col class="info-table__col">
+                      <col class="info-table__col">
+                      <col class="info-table__col">
+
+                      <tbody class="info-table__tbody">
+                        <tr class="info-table__tr">
+                          <td class="info-table__td" colspan="5">
+                            <span>Сформирован запрос на издание сертификата <div class="break-text"><a href=""><Номер запроса></a></div> статус запроса</span> <b>НА ИЗДАНИИ</b>
+                            <i class="icon icon--label"></i>
+                          </td>
+                        </tr>
+                        <tr class="info-table__tr">
+                          <td class="info-table__td">
+                            <a href="">Сертификат № <div class="break-text">0000000000000000000000000000000000000000</div></a>
+                          </td>
+                          <td class="info-table__td">Петров Петр Петрович</td>
+                          <td class="info-table__td">до 01.12.2019</td>
+                          <td class="info-table__td"><span>Администратор ЗВ (01 Адыгея)</span></td>
+                          <td class="info-table__td">
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </section>
+
+              <section class="section">
+                <div class="section__block section__block--header section__block--toggler section__block--dark">
+                  <h2 class="section-title section-title--light section-title--expanded section-title--dropdown">
+                    <p><b>Петров П.П.</b></p> 
+                    <p>СНИЛС <i class="break-text">087-258-988 05</i></p>
+                  </h2>
+                </div>
+                <div class="section__block section__block--body section__block--no-padding section__block--no-toggle">
+                  <div class="section__subsection">
+                    <div class="status-box">
+                      <div class="status-box__item status-box__item--nonActive">
+                        <div class="status-text status-text--grey">Неактивный</div>
+                        Администратор истек 01.12.2019
+                      </div>
+                      <div class="status-box__item status-box__item--nonActive">
+                        <div class="status-text status-text--grey">Неактивный</div>
+                        Оператор истек 01.12.2019
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section__subsection section__subsection--togglable">
+                    <table class="info-table info-table--adm info-table--bordered">
+
+                      <col class="info-table__col">
+                      <col class="info-table__col">
+                      <col class="info-table__col">
+                      <col class="info-table__col">
+                      <col class="info-table__col">
+
+                      <tbody class="info-table__tbody">
+                        <tr class="info-table__tr">
+                          <td class="info-table__td">
+                            <a href="">Сертификат № <div class="break-text">0000000000000000000000000000000000000000</div></a>
+                          </td>
+                          <td class="info-table__td">Петров Петр Петрович</td>
+                          <td class="info-table__td">до 01.12.2019</td>
+                          <td class="info-table__td"><span>Администратор ЗВ (01 Адыгея)</span></td>
+                          <td class="info-table__td">
+                          </td>
+                        </tr>
+                        <tr class="info-table__tr">
+                          <td class="info-table__td">
+                            <a href="">Сертификат № <div class="break-text">0000000000000000000000000000000000000000</div></a>
+                          </td>
+                          <td class="info-table__td">Петров Петр Петрович</td>
+                          <td class="info-table__td">до 01.12.2019</td>
+                          <td class="info-table__td"><span>Оператор (02 Башкортостан)</span></td>
+                          <td class="info-table__td">
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </section>
+
+              <!-- нижний контрол -->
+              <section class="result-control result-control--bottom">
+                <div class="pagination">
+                  <div class="pagination__nav pagination__nav--prev"></div>
+                  <div class="pagination__pages">
+                    <a href="" class="pagination__page pagination__page--current">1</a>
+                    <a href="" class="pagination__page">2</a>
+                    <a href="" class="pagination__page">3</a>
+                    <a href="" class="pagination__page">4</a>
+                    <a href="" class="pagination__page">6</a>
+                    <a href="" class="pagination__page">7</a>
+                    <a href="" class="pagination__page">8</a>
+                  </div>
+                  <div class="pagination__nav pagination__nav--next"></div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer container">
+    <p class="copyright">©  2019 Компания «Информзащита»</p>
+    <p class="version-text">Lorem ipsum dolor sit amet.</p>
+  </footer>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../js/informdefend.js"></script>
+<script>
+informdefend();
+</script>
+</body>
+</html>

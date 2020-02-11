@@ -1,0 +1,47 @@
+.slide-checkbox {
+	display: inline-block;
+	vertical-align: middle;
+	width: 42px;
+	height: 24px;
+	border-radius: 12px;
+	overflow: hidden;	
+	background-color: #ffffff;
+	position: relative;
+	box-shadow: 0 2px 5px rgba(75, 158, 250, 0.47);
+	cursor: pointer;
+
+	&--inner-text {
+		margin: 0 10px;
+		transform: translateY(-2px);
+
+		@media screen and @xs-max {
+		    display: block;
+		    margin: 20px 0;
+		    transform: rotateZ(90deg);
+		}
+	}
+
+	&__input {
+		display: none;
+	}
+
+	&__checkbox {
+		content: '';
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		border-radius: 12px;
+		background-color: #ffffff;
+		border: 7px solid #4b9efa;
+		transition: left 0.2s;
+		box-shadow: 0 2px 5px rgba(75, 158, 250, 0.47);
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+	}
+
+	&__input:checked + &__checkbox {
+		left: 18px;
+	}
+}
